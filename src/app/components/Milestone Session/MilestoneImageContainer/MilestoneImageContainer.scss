@@ -1,0 +1,121 @@
+@import "./../../../Styles/app.scss";
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.milestone-container{
+    width: 100%;
+    .img-container{
+        width: 100%;
+        display: flex;
+        @include xtablet{
+            flex-direction: column;
+        }
+        .milestone-baby-img{
+            width: 65%;
+            height: auto;
+            background-image: url(/img1.webp);
+             background-size: cover;
+             background-repeat: no-repeat;
+             animation: change-image 8s infinite alternate-reverse ease-in-out;            
+             @include xtablet{
+                width: 100%;
+            }
+        }
+        @keyframes change-image{
+            0% {
+              background-image: url(/img2.webp);
+            }
+            50% {
+              background-image: url(/img3.webp);
+            }
+            100% {
+              background-image: url(/img4.webp);
+            }
+          }
+    
+    .milestone-photography-details{
+        width: 35%;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        @include xtablet{
+         width: 100%;
+         padding: 30px;
+        }
+        .milestone{
+            font-size: 32px;
+            letter-spacing: 1px;
+            color: #2f3640;
+            font-family: "Antic Didone", sans-serif;
+            @include xtablet{
+            font-size: 28px;
+            }
+        }
+        .pricing{
+            font-size: 20px;
+            color: #2f3640;
+            padding: 30px 0px; 
+            font-family: "Antic Didone", sans-serif;
+            @include xtablet{
+            font-size: 18px;
+            padding: 20px 0px;
+            } 
+        }
+        .Rs{
+            color: #bb8aa0;
+            font-size: 22px;
+            font-family: "Antic Didone", sans-serif;
+
+        }
+        .btn{
+            height: 70px;
+            width: 95%;
+            border-radius: 4px;
+            background: linear-gradient(to right, #DD6FA0, #ba4d7e, #AF557D);
+            font-size: 24px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            opacity: 0.5;
+            font-family: "Antic Didone", sans-serif;
+            cursor: pointer;
+            transition: 0.3s ease;
+            @include xtablet{
+            width: 100%;
+            }
+            
+        }
+        .btn:hover{
+            opacity: 1;
+        }
+        .milestone-description{
+            
+            padding: 20px 0px;
+            @include xtablet{
+                padding: 10px 0px;
+                }   
+            .p{
+                width: 100%;
+                font-size: 16px;
+                letter-spacing: 1px;
+                color: #2f3640;
+                padding: 10px 0px;
+                font-family: "Antic Didone", sans-serif;
+                @include xtablet{
+                font-size: 18px;
+                }
+            }
+        }
+       
+    }    
+    
+}
+    
+}

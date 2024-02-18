@@ -1,0 +1,110 @@
+@mixin xldisplay() {
+  @media only screen and (min-width: "1620px") {
+    @content;
+  }
+}
+@mixin min_xtablet() {
+  @media only screen and (min-width: "767px") {
+    @content;
+  }
+}
+@mixin xxdisplay() {
+  @media only screen and (max-width: "1619px") {
+    @content;
+  }
+}
+@mixin xdisplay() {
+  @media only screen and (max-width: "1419px") {
+    @content;
+  }
+}
+@mixin display() {
+  @media only screen and (max-width: "1339px") {
+    @content;
+  }
+}
+@mixin xlaptop() {
+  @media only screen and (max-width: "1179px") {
+    @content;
+  }
+}
+@mixin laptop() {
+  @media only screen and (max-width: "1023px") {
+    @content;
+  }
+}
+@mixin z() {
+  @media only screen and (max-width: "767px") {
+    @content;
+  }
+}
+@mixin xtablet() {
+  @media only screen and (max-width: "767px") {
+    @content;
+  }
+}
+@mixin tab() {
+  @media only screen and (max-width: "850px") {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media only screen and (max-width: "639px") {
+    @content;
+  }
+}
+@mixin mobile {
+  @media only screen and (max-width: "474px") {
+    @content;
+  }
+}
+@mixin smobile {
+  @media only screen and (max-width: "350px") {
+    @content;
+  }
+}
+
+@mixin font($size, $weight, $spacing) {
+  font-size: $size;
+  font-weight: $weight;
+  letter-spacing: $spacing;
+}
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin background-image(
+  $image,
+  $position: center,
+  $size: cover,
+  $repeat: no-repeat
+) {
+  background-image: $image;
+  background-position: $position;
+  background-size: $size;
+  background-repeat: $repeat;
+}
+@mixin position($type, $top: auto, $right: auto, $bottom: auto, $left: auto) {
+  position: $type;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin min-size($min-width, $min-height) {
+  min-width: $min-width;
+  min-height: $min-height;
+}
+
+@mixin max-size($max-width, $max-height) {
+  max-width: $max-width;
+  max-height: $max-height;
+}

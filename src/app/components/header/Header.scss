@@ -1,0 +1,176 @@
+@import '../../Styles/app.scss';
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
+
+.headercontainer {
+  width: 100%;
+  height: 130px;
+  background-color: #A16F86;
+  position: relative;
+  z-index: 1000;
+@include tab{
+    height: 80px;
+}
+  .headerchild {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    .leftnav {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      @include laptop{
+        display: none;
+      }
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+          // padding: 10px 10px;
+          position: relative;
+
+          a {
+            color: white;
+            font-family: Helvetica;
+            letter-spacing: 1px;
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            z-index: 10;
+            gap: 5px;
+            transition: all 0.3s;
+            padding: 10px 10px;
+            &:hover {
+              color: black;
+            }
+          }
+
+          .contact {
+            display: flex;
+            gap: 5px;
+          }
+
+          .dropdown-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #AC7890;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            display: none;
+            margin-top: -5px;
+            ul{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            a {
+              color: white;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              // transition: all 0.3s;
+              white-space: nowrap;
+              &:hover {
+                // background-color: #ddd;
+                color: black;
+              }
+            }
+          }
+
+          &:hover .dropdown-content {
+            display: block;
+          }
+          .sub-dropdown-content{
+            position: absolute;
+            width: 250px;
+            background-color: #AC7890;
+
+            right: -113%;
+            top: 0;
+            ul{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                a{
+                    white-space:normal;
+                }
+            }
+          }
+        }
+      }
+    }
+
+    .centerlogo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        // width: 120px;
+        object-fit: contain;
+        @include tab{
+            width: 70px;
+            height: 50px;
+        }
+      }
+    }
+    .mobilemenu {
+        display: none;
+  position: relative;
+
+  @include laptop {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align to the right */
+    color: white;
+    gap: 5px;
+    position: absolute;
+    right: 20px;
+  }
+        .openmobile {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+    .rightsocial {
+        @include laptop{
+            display: none;
+        }
+      ul {
+        display: flex;
+        gap: 5px;
+
+        li {
+          padding: 5px 10px;
+
+          a {
+            color: white;
+            font-family: Helvetica;
+            letter-spacing: 1px;
+            font-size: 17px;
+            display: flex;
+            gap: 5px;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}

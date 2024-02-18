@@ -1,0 +1,231 @@
+@import "../../Styles/app.scss";
+.main-container{
+    width: 100%;
+    background-color: #fbf7f6;
+    padding: 100px 0px;
+    @include xtablet{
+        padding: 50px 0px;
+    }
+    .professional-container{
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0px 30px;
+        
+        .professional-heading{
+            width: 100%;
+            text-align: center;
+            font-size: 48px;
+            font-weight: 400;
+            color: #bb8aa0;
+            letter-spacing: 1px;
+            @include xtablet{
+            font-size: 30px;
+            }
+        }
+        .professional-wrapper{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            @include xtablet{
+                flex-direction: column;
+            }
+            .emily-photography{
+                width: 33%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @include xtablet{
+                    width: 100%;
+                }
+                .photography-name{
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    color: #2f3640;
+                    padding: 30px 0px;
+                    font-weight: 400;
+                    @include xtablet{
+                        font-size: 22px;
+                    }
+                }
+                .baby-img{ 
+                    height: 330px;
+                    overflow: hidden;                    
+                    border-radius: 999px;
+                    object-fit: cover;
+                    border: 8px solid #EEE6E3;
+                    background-color: rgb(165, 113, 45);
+                }
+                .photography-price{
+                    font-size: 32px;
+                    font-weight: bold;
+                    color: #bb8aa0;
+                    letter-spacing: 1px;
+                    padding-top: 20px ;
+                    @include xtablet{
+                        font-size: 28px;          
+                    }
+                }
+                .photography-details{
+                    font-size: 17px;
+                    font-weight: 500;
+                    padding-top: 22px ;
+                    color: #54595f;
+                    font-family: AvenirLight, sans-serif;
+                    text-align: center;
+                }
+                .contact-us{
+                    height: 80px;
+                    margin-top: 30px;
+                    width: 330px;
+                    border-radius: 4px;
+                    background: linear-gradient(to right, #DD6FA0, #ba4d7e, #AF557D);
+                    font-size: 24px;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0.5;
+                    transition: 0.3s ease;
+                    cursor: pointer;
+                }
+                .contact-us:hover{
+                    opacity: 1;
+                }
+            }
+            // milestone session
+            .milestone-session{
+                width: 33%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @include xtablet{
+                    width: 100%;
+                }
+                .milestone-name{
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    color: #2f3640;
+                    padding: 30px 0px;
+                    font-weight: 400;
+                    @include xtablet{
+                        font-size: 20px;
+                    }
+                }
+                .milestone-baby-img{ 
+                    height: 330px;
+                    overflow: hidden;
+                    border-radius: 999px;
+                    object-fit: cover;
+                    border: 8px solid #EEE6E3;
+                    background-color: rgb(165, 113, 45);
+                }
+                .milestone-photography-price{
+                    font-size: 32px;
+                    font-weight: bold;
+                    color: #bb8aa0;
+                    letter-spacing: 1px;
+                    padding-top: 20px ;
+                    @include xtablet{
+                        font-size: 28px;          
+                    }
+                }
+                .milestone-photography-details{
+                    font-size: 17px;
+                    font-weight: 500;
+                    padding-top: 22px ;
+                    color: #54595f;
+                    font-family: AvenirLight, sans-serif;
+                    text-align: center;
+                }
+                .milestone-contact-us{
+                    height: 80px;
+                    margin-top: 30px;
+                    width: 330px;
+                    border-radius: 4px;
+                    background: linear-gradient(to right, rgba(190, 39, 128, 0.893), rgba(166, 17, 104, 0.893), rgba(110, 10, 73, 0.875));
+                    font-size: 24px;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0.5;
+                    transition: 0.3s ease;
+                    cursor: pointer;
+                }
+                .milestone-contact-us:hover{
+                    opacity: 1;
+                }
+            }
+            // holiday session
+            .holiday-session{
+                width: 33%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @include xtablet{
+                    width: 100%;
+                }
+                .holiday-name{
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    color: #2f3640;
+                    padding: 30px 0px;
+                    font-weight: 400;
+                    @include xtablet{
+                        font-size: 20px;
+                    }
+                }
+                .holiday-baby-img{ 
+                    height: 330px;
+                    overflow: hidden;             
+                    border-radius: 999px;
+                    object-fit: cover;
+                    border: 8px solid #EEE6E3;
+                    background-color: rgb(165, 113, 45);
+                }
+                .holiday-price{
+                    font-size: 32px;
+                    font-weight: bold;
+                    color: #bb8aa0;
+                    letter-spacing: 1px;
+                    padding-top: 20px ;
+                    @include xtablet{
+                        font-size: 28px;          
+                    }
+                }
+                .holiday-details{
+                    font-size: 17px;
+                    font-weight: 500;
+                    padding-top: 22px ;
+                    color: #54595f;
+                    font-family: AvenirLight, sans-serif;
+                    text-align: center;
+                }
+                .holiday-contact-us{
+                    height: 80px;
+                    margin-top: 240px;
+                    width: 330px;
+                    border-radius: 4px;
+                    background: linear-gradient(to right, rgba(190, 39, 128, 0.893), rgba(166, 17, 104, 0.893), rgba(110, 10, 73, 0.875));
+                    font-size: 24px;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0.5;
+                    transition: 0.3s ease;
+                    cursor: pointer;
+                    @include xtablet{
+                        margin-top: 30px;
+                    }
+                }
+                .holiday-contact-us:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,136 @@
+@import '../../Styles/app.scss';
+.sliderg {
+  max-width: 800px;
+
+ @include tab{
+    padding: 0px 20px;
+    max-width: 100%;
+ }
+  .slick-track {
+    display: flex !important;
+    align-items: stretch !important; // Stretch items to match the height of the tallest item
+  }
+  .slide-item {
+    display: flex !important; // Override default display property
+
+    height: 230px;
+  }
+  .prev {
+    position: absolute;
+    left: -20px;
+    color: #484e57;
+    top: 42%;
+    z-index: 1;
+    cursor: pointer;
+    @include tab{
+        left: 0;
+    }
+  }
+
+  .next {
+    position: absolute;
+    color: #484e57;
+    top: 42%;
+    right: 10px;
+    z-index: 1;
+    right: -20px;
+    cursor: pointer;
+    @include tab{
+        right: 0;
+    }
+  }
+}
+
+.exce-rate-2 {
+  width: 100%;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  font-family: "Open sans";
+
+  .item-p-wrap1 {
+    display: flex;
+    align-items: center;
+    font-family: "Open sans";
+
+    .inflex {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+    .item-p-wrap {
+      display: flex;
+      align-items: center;
+      font-family: "Open sans";
+
+      display: flex;
+    }
+    .item {
+      width: 20%;
+      max-width: 50px; /* Adjust as needed */
+    }
+
+    .wrapper-p {
+      padding-left: 10px;
+
+      .item-wrap {
+        font-size: 14px;
+        font-weight: bold;
+        font-family: "Open sans";
+      }
+
+      .item-wrap1 {
+        font-size: 11px;
+        color: rgb(175, 173, 173);
+        font-family: "Open sans";
+      }
+    }
+
+    .google-icon {
+      width: 20px;
+      max-width: 30px; /* Adjust as needed */
+      object-fit: contain;
+      position: absolute;
+      right: 15px;
+    }
+  }
+
+  .images {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 10px;
+    gap: 5px;
+
+    .icon {
+      width: 10%;
+      max-width: 15px; /* Adjust as needed */
+    }
+  }
+.para{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  .para1 {
+    font-family: "Open sans";
+    font-size: 15px;
+    margin-top: 10px;
+
+    .anchr {
+      color: #484e57;
+      font-size: 8px;
+    }
+  }}
+}
+
+.slick-slide {
+  height: auto !important;
+}
+
+.slick-slide > div {
+  margin: 10px; /* Adjust the gap between slides */
+}

@@ -1,0 +1,247 @@
+@import "./../../../Styles/app.scss";
+    // contact us
+    .con{
+        width: 100%;
+        background-color: #FBF7F6;   
+    .spring-container{
+        width: 100%;
+        max-width: 1000px;
+        padding: 50px 50px;
+        margin: 0px auto;
+        @include xtablet{
+          padding: 20px 20px;
+            }
+        .spring{
+            font-size: 30px;
+            color: #2f3640;
+            text-align: center;
+            padding: 30px 0px;
+            font-family: AvenirLight, sans-serif;
+            @include xtablet{
+               font-size: 27px;
+               padding: 20px 0px;
+                }
+        }
+        .name{
+            display: flex;
+            width: 100%;
+            gap: 40px;
+            justify-content: center;
+            @include xtablet{
+                flex-direction: column;
+                gap: 25px;
+                }
+            .f-name{
+                width: 45%;
+                @include xtablet{
+                    width: 100%;
+                    }
+                .label{
+                    font-size: 16px;
+                    color: #2f3640;
+                    font-family: AvenirLight, sans-serif;
+                    font-weight: 600;
+                }
+                .first-name{
+                    height: 55px;
+                    width: 100%;
+                    margin: 5px 0px;
+                    border: 1px solid #2f3640;
+                    padding: 10px;
+                    color: #DD6FA0;
+                    font-size: 20px;
+                    font-family: "Antic Didone", sans-serif;
+                }
+            } 
+            .l-name{
+                width: 45%;
+                @include xtablet{
+                    width: 100%;
+                    }
+                .label{
+                    font-size: 16px;
+                    color: #2f3640;
+                    font-family: AvenirLight, sans-serif;
+                    font-weight: 600;
+                }
+                .last-name{
+                    height: 55px;
+                    width: 100%;
+                    margin: 5px 0px;
+                    border: 1px solid #2f3640;
+                    padding: 10px;
+                    color: #DD6FA0;
+                    font-size: 20px;
+                    font-family: "Antic Didone", sans-serif;
+                    @include xtablet{                       
+                        margin: 0px 0px;
+                         }
+                }
+            }    
+        }
+        .address{
+            display: flex;
+            width: 100%;
+            gap: 40px;
+            margin: 30px 0px;
+            justify-content: center;
+            @include xtablet{
+               flex-direction: column;
+               gap: 25px;
+               margin: 20px 0px;
+                }
+            .mail{
+                width: 45%;
+                @include xtablet{
+                    width: 100%;
+                    }
+                .label{
+                    font-size: 16px;
+                    color: #2f3640;
+                    font-family: AvenirLight, sans-serif;
+                    font-weight: 600;
+                }
+                .email{
+                    height: 55px;
+                    width: 100%;
+                    margin: 5px 0px;
+                    border: 1px solid #2f3640;
+                    padding: 10px;
+                    color: #DD6FA0;
+                    font-size: 20px;
+                    font-family: "Antic Didone", sans-serif;
+                }
+            } 
+            .number{
+                width: 45%;
+                @include xtablet{
+                  width: 100%;
+                     }
+                .label{
+                    font-size: 16px;
+                    color: #2f3640;
+                    font-family: AvenirLight, sans-serif;
+                    font-weight: 600;
+                }
+                .phone-number{
+                    height: 55px;
+                    width: 100%;
+                    margin: 5px 0px;
+                    border: 1px solid #2f3640;
+                    padding: 10px;
+                    color: #DD6FA0;
+                    font-size: 20px;
+                    font-family: "Antic Didone", sans-serif;
+                    @include xtablet{                     
+                        margin: 0px 0px;
+                         }
+                }
+            }    
+        }
+        .refrence{
+            display: flex;
+            width: 100%;
+            gap: 40px;
+            margin: 30px 0px;
+            justify-content: center;
+            @include xtablet{
+                flex-direction: column;
+                gap: 25px;
+                margin: 20px 0px;
+                 }
+            .date{
+                width: 45%;
+                @include xtablet{
+                width: 100%;
+                     }
+                .label{
+                    font-size: 16px;
+                    color: #2f3640;
+                    font-family: AvenirLight, sans-serif;
+                    font-weight: 600;
+                }
+                .Date{
+                    height: 55px;
+                    width: 100%;
+                    margin: 5px 0px;
+                    border: 1px solid #2f3640;
+                    padding: 10px;
+                    color: #DD6FA0;
+                    font-size: 20px;
+                    font-family: "Antic Didone", sans-serif;
+                   
+                }
+            } 
+            .refrence-by{
+                width: 45%;
+                @include xtablet{
+                   width: 100%;
+                     }
+                .label{
+                    font-size: 16px;
+                    color: #2f3640;
+                    font-family: AvenirLight, sans-serif;
+                    font-weight: 600;
+                }
+                .person{
+                    height: 55px;
+                    width: 100%;
+                    margin: 5px 0px;
+                    border: 1px solid #2f3640;
+                    padding: 10px;
+                    color: #DD6FA0;
+                    font-size: 20px;
+                    font-family: "Antic Didone", sans-serif;
+                    @include xtablet{
+                        margin: 0px 0px;
+                         }
+                }
+            }    
+        }
+        .comments{
+            font-size: 24px;
+            font-weight: 500;
+            font-family: AvenirLight, sans-serif;
+            color: #2f3640;
+            text-align: center;
+            padding: 30px 0px;
+        }
+        .message{
+            height: 100px;
+            width: 100%;
+            margin: 30px 0px;
+            border: 1px solid #2f3640;
+            padding: 10px;
+            color: #DD6FA0;
+            font-size: 20px;
+            padding: 10px;
+
+        }
+        .schedule-session{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .schedule-btn{
+                height: 55px;
+                width: 330px;
+                margin: 50px 0px;
+                border-radius: 4px;
+                background: linear-gradient(to right,#AF557D, #ba4d7e, #AF557D);
+                font-size: 24px;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0.5;
+                font-family: "Antic Didone", sans-serif;
+                cursor: pointer;
+                transition: 0.3s ease;                transition: 0.3s ease;
+            }
+            .schedule-btn:hover{
+                opacity: 1;
+            }
+        }
+      
+      
+    }
+}

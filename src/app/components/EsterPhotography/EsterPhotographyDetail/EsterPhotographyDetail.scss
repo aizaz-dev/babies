@@ -1,0 +1,29 @@
+@import "./../../../Styles/app.scss";
+.ester-photography-details
+{
+    width: 100%;
+    .photography-details{
+        width: 100%;
+        max-width: 1200px;
+        margin: 0px auto;
+        padding: 0px 50px;
+        display: flex;
+        gap: 30px;
+        @include xtablet{
+           flex-direction: column;
+           padding: 0px 20px;
+           gap: 0px;
+         }
+        .ester-p{
+            width: 33%;
+            font-size: 16px;
+            color: #d2beb6;
+            font-family: "Antic Didone", sans-serif;
+            padding: 50px 0px;
+            @include xtablet{
+                padding: 15px 0px;
+                width: 100%;
+            }
+        }
+    }
+}

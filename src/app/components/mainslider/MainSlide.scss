@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.slidetop {
+    width: 100%;
+    max-width: 100%; /* Ensure slider takes up the full viewport width */
+    overflow: hidden; /* Hide any overflow content */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+    .slick-slide{
+        width: 100%;
+    }
+    .slick-list {
+      overflow: hidden; /* Hide any overflow content within the slider */
+      width: 100vw;
+    }
+  
+    .imgslide {
+      width: 105%;
+      height: 800px;
+      object-fit: cover;
+      margin-left: -20px;
+      margin-top: -20px;
+    }
+  }

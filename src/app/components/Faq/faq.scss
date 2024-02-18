@@ -1,0 +1,52 @@
+/* FAQComponent.css */
+
+.faq-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .faq-item {
+    position: relative; /* Make the container relative for absolute positioning of the arrow */
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faq-item:hover {
+    background-color: #f8f8f8;
+  }
+  
+  .faq-item.active {
+    background-color: #e8e8e8;
+  }
+  
+  .question {
+    font-family: "Cormorant";
+    color: black;
+    font-size: 23px;
+    font-weight: 500;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-item.active .arrow {
+    transform: rotate(180deg); /* Rotate the arrow for the expanded state */
+  }
+  
+  .answer {
+    margin-top: 10px;
+    font-family: "Jost";
+    font-size: 16px;
+    font-weight: 400;
+    color: #201c1c;
+  }
+  

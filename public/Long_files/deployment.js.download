@@ -1,0 +1,17 @@
+var client_view_id="43028782";
+function loadLiftAI(){
+    var c=document.createElement("script");
+    c.type="text/javascript";
+    c.src="https://lift-ai-js.marketlinc.com/www.cljphotographyny.com/snippet.js?viewId\x3d"+client_view_id;
+    c.id="vs_snippet_script_id";document.getElementsByTagName("head")[0].appendChild(c)
+}
+try{
+    loadLiftAI()
+} catch(c){}
+var ML_getCookie=function(e){for(var t=e+"=",i=decodeURIComponent(document.cookie).split(";"),o=0;o<i.length;o++){for(var n=i[o];" "==n.charAt(0);)n=n.substring(1);if(0==n.indexOf(t))return n.substring(t.length,n.length)}return""}
+var ML_setCookie=function(e,t,i){var o=new Date;o.setTime(o.getTime()+864e5*i);var n="expires="+o.toUTCString();document.cookie=e+"="+t+";domain=www.cljphotographyny.com;"+n+";path=/"};
+try{var ml_vs_score=ML_getCookie("vs_conv_ai"),ml_score_int=parseInt(ml_vs_score.split("-")[1]),ml_intent_band=function(e){return e>60?"High Intent":e>30&&e<=60?"Mid Intent":"Low Intent"};ML_setCookie("vs_intent",ml_intent_band(ml_score_int)),""!=ml_vs_score&&null==sessionStorage.getItem("ml_old_score")&&sessionStorage.setItem("ml_old_score",ml_vs_score);var ml_check_cookie_update_Interval=setInterval((function(){try{var e=sessionStorage.getItem("ml_old_score");if(""!=ml_vs_score&&(ml_vs_score!=ML_getCookie("vs_conv_ai")||e!=ML_getCookie("vs_conv_ai"))){sessionStorage.setItem("ml_old_score",ML_getCookie("vs_conv_ai"));var _=ML_getCookie("vs_conv_ai"),t=parseInt(_.split("-")[1]);ML_setCookie("vs_intent",ml_intent_band(t))}}catch(e){}}),1e4);}catch(e){}
+
+
+
+

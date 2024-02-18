@@ -1,0 +1,90 @@
+@import "../../Styles/app.scss";
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 100px auto;
+    @include xtablet{
+        padding: 10px;
+        margin: 50px auto;
+        }
+    .wrapper{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include xtablet{
+            flex-direction: column;       
+        }
+        .cake-smash{
+            width: 33%;
+            display: flex;        
+            flex-direction: column;
+            align-items: center;
+            @include xtablet{
+            width: 100%;
+            
+            }
+            .Heading{
+                font-size: 24px;
+                letter-spacing: 1px;
+                color: #2f3640;
+                padding: 20px 0px;
+                font-weight: 400;
+                @include xtablet{
+                font-size: 22px;         
+                }
+            }
+            .baby-image{ 
+                height: 350px;
+                width: 350px;
+                overflow: hidden;            
+                border-radius: 999px;
+                object-fit: cover;
+                border: 8px solid #EEE6E3;
+                background-color: rgb(165, 113, 45);
+            }
+            .Price{
+                font-size: 32px;
+                font-weight: bold;
+                color: #bb8aa0;
+                letter-spacing: 1px;
+                padding-top: 20px ;
+                @include xtablet{
+                    font-size: 28px;          
+                }
+            }
+            .smash-button{
+                height: 80px;
+                margin-top: 30px;
+                width: 350px;
+                border-radius: 4px;
+                background: linear-gradient(to right, #DD6FA0, #ba4d7e, #AF557D);
+                font-size: 24px;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0.5;
+                transition: 0.3s ease;
+                cursor: pointer;
+            }
+            .smash-button:hover{
+                opacity: 1;
+            }
+            .details{
+                  padding: 15px 30px;
+                  text-align: center;
+
+                  .text{
+                    font-size: 17px;
+                    font-weight: 500;
+                    margin: 0px 10px;
+                    padding-top: 22px;
+                    color: #54595f;
+                    font-family: AvenirLight, sans-serif;
+                }
+               
+            }
+        }
+    }
+}

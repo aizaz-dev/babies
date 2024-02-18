@@ -1,0 +1,68 @@
+@import "../../Styles/app.scss";
+.services-container{
+    width: 100%;
+    padding: 30px 30px;
+   .services-heading{
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 400;
+    color: #2f3640;
+    letter-spacing: 1px;
+    padding: 30px 0px;
+    @include xtablet{
+    font-size: 35px;
+    padding: 0px 0px;
+    }
+   } 
+   .service-wrapper{
+    width: 100%;
+    max-width: 1200px;
+    gap: 30px;
+    margin: 0px auto;
+    padding: 0px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include xtablet{
+        flex-direction: column;
+        padding: 0px 0px;
+        gap: 0px;
+    }
+   }
+   .photography{
+    width: 30%;
+    text-align: center;
+    @include xtablet{
+        width: 100%;
+    }
+    .service-name{
+        font-size: 24px;
+        letter-spacing: 1px;
+        color: #2f3640;
+        padding: 20px 0px;
+        font-weight: 400;
+        @include xtablet{
+            font-size: 20px;
+        }
+    }
+        .service-des{
+            font-size: 16px;
+            color: #2c3e50;
+        }
+        .link{
+            font-size: 16px;
+            color: #bb8aa0;
+            text-decoration: underline;
+            padding: 30px 0px;
+            @include xtablet{
+             padding: 20px 0px;
+            }
+        }
+        .link:hover{
+            font-weight: bold;
+        }
+    
+   }
+
+}
