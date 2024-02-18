@@ -114,8 +114,8 @@ const page = () => {
             <p className=" Claudette">
               {" "}
               <i>
-                We've used Cydnee from CLJ photography for the past 4yr. She is
-                absouletly amazing and we just look work.She's patience kind and
+                We&apos;ve used Cydnee from CLJ photography for the past 4yr. She is
+                absouletly amazing and we just look work.She&apos;s patience kind and
                 takes the most beautiful picture.
               </i>
             </p>
