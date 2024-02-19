@@ -6,7 +6,7 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import ServiceSlide from "./ServiceSlide";
 
-const page = () => {
+const Page = () => {
 
   const { id } = useParams();
   const filteredData = data.find((item) => {
@@ -89,4 +89,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
