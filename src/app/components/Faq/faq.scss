@@ -1,9 +1,16 @@
 /* FAQComponent.css */
-
+@import '../../Styles/app.scss';
 .faq-container {
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
+    padding: 0px 80px;
+    @include tab{
+      padding: 0px 40px;
+    }
+    @include xtablet{
+      padding:  0px 28px;
+    }
   }
   
   .faq-item {

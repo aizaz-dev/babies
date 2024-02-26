@@ -20,6 +20,7 @@
             display: flex;        
             flex-direction: column;
             align-items: center;
+            
             @include xtablet{
             width: 100%;
             
@@ -67,6 +68,9 @@
                 opacity: 0.5;
                 transition: 0.3s ease;
                 cursor: pointer;
+                @include tab{
+                    width: 250px;
+                }
             }
             .smash-button:hover{
                 opacity: 1;

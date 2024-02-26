@@ -8,6 +8,15 @@
 }
 .Investment-container{
     width: 100%;
+    padding: 0px 80px;
+    @include tab{
+    padding: 0px 40px;
+
+    }
+    @include xtablet{
+    padding: 0px 28px;
+
+    }
  
     .investment-wrapper{
         width: 100%;
@@ -34,20 +43,27 @@
         }
         .info-session{
             width: 100%;
-            display: flex;
+           display:  grid;
+           grid-template-columns: 1fr 1fr 1fr;
+            justify-content: center;
             flex-wrap: wrap;
+            align-items: center;
+            @include tab{
+                grid-template-columns: 1fr 1fr;
+            }
+
             @include xtablet{
                 flex-direction: column;
+                grid-template-columns: 1fr;
             }
             .simply-baby-session{
-                width: 33%;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+               
                 
-                @include xtablet{
-                    width: 100%;
-                }
+              
                 .heading{
                     font-size: 24px;
                     letter-spacing: 1px;

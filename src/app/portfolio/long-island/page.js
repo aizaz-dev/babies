@@ -6,13 +6,14 @@ import { SlEmotsmile } from "react-icons/sl";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { IoCaretForwardSharp } from "react-icons/io5";
 // import FAQComponent from "@/app/_components/Footer/Faq/page";
-import './style.scss'
+import "./style.scss";
 import FAQComponent from "@/app/components/Faq/page";
 const page = () => {
   return (
     <main>
+
       <div className="long_island_main_head">
-        <div className="long_island_min_head">
+        {/* <div className="long_island_min_head">
           <img className="long_island_logo" src="/logo.webp" alt="logo" />
           <div className="long_island_head_call_main">
             <div className="long_island_call_min_1">
@@ -23,7 +24,7 @@ const page = () => {
               516-453-9331
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="long_island_main_head_new">
           <div className="long_island_main_head_new_icon">
             <FaPhoneAlt size={30} color="black" />
@@ -124,7 +125,7 @@ const page = () => {
             <FaStar color="orange" />5 Star Reviews on Google
           </div>
           <div className="testinomial_min_text_3">
-            <h1>Slider..</h1>
+            {/* <h1>Slider..</h1> */}
           </div>
         </div>
       </div>
@@ -382,97 +383,170 @@ const page = () => {
         {/* Next component */}
         <div className="gallery_main">
           <div className="gallery_min">
-          <div className="gallery_min_text">
-          GALLERY OF JOY
-          </div>
-          <div className="gallery_min_gallery">
-            <div className="gallery_min_gallery_1">
-              <img className="gallery_min_gallery_1_img_01" src="/grid_01.jpg" alt="" />
+            <div className="gallery_min_text">GALLERY OF JOY</div>
+            <div className="gallery_min_gallery">
+              <div className="gallery_min_gallery_1">
+                <img
+                  className="gallery_min_gallery_1_img_01"
+                  src="/grid_01.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="gallery_min_gallery_1">
+                <img
+                  className="gallery_min_gallery_1_img_01"
+                  src="/grid_02.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="gallery_min_gallery_1">
+                <img
+                  className="gallery_min_gallery_1_img_01"
+                  src="/grid_03.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="gallery_min_gallery_1">
+                <img
+                  className="gallery_min_gallery_1_img_01"
+                  src="/grid_04.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="gallery_min_gallery_1">
+                <img
+                  className="gallery_min_gallery_1_img_01"
+                  src="/grid_05.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="gallery_min_gallery_1">
+                <img
+                  className="gallery_min_gallery_1_img_01"
+                  src="/grid_06.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="gallery_min_gallery_1">
+                <img
+                  className="gallery_min_gallery_1_img_01"
+                  src="/grid_07.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="gallery_min_gallery_1">
+                <img
+                  className="gallery_min_gallery_1_img_01"
+                  src="/grid_08.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="gallery_min_gallery_1">
+                <img
+                  className="gallery_min_gallery_1_img_01"
+                  src="/grid_09.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="gallery_min_gallery_1">
+                <img
+                  className="gallery_min_gallery_1_img_01"
+                  src="/grid_10.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="gallery_min_gallery_1">
+                <img
+                  className="gallery_min_gallery_1_img_01"
+                  src="/grid_11.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="gallery_min_gallery_1">
+                <img
+                  className="gallery_min_gallery_1_img_01"
+                  src="/grid_12.jpg"
+                  alt=""
+                />
+              </div>
             </div>
-            <div className="gallery_min_gallery_1">
-            <img className="gallery_min_gallery_1_img_01" src="/grid_02.jpg" alt="" />
-            </div>
-            <div className="gallery_min_gallery_1">
-            <img className="gallery_min_gallery_1_img_01" src="/grid_03.jpg" alt="" />
-            </div>
-            <div className="gallery_min_gallery_1">
-            <img className="gallery_min_gallery_1_img_01" src="/grid_04.jpg" alt="" />
-            </div>
-            <div className="gallery_min_gallery_1">
-            <img className="gallery_min_gallery_1_img_01" src="/grid_05.jpg" alt="" />
-            </div>
-            <div className="gallery_min_gallery_1">
-            <img className="gallery_min_gallery_1_img_01" src="/grid_06.jpg" alt="" />
-            </div>
-            <div className="gallery_min_gallery_1">
-            <img className="gallery_min_gallery_1_img_01" src="/grid_07.jpg" alt="" />
-            </div>
-            <div className="gallery_min_gallery_1">
-            <img className="gallery_min_gallery_1_img_01" src="/grid_08.jpg" alt="" />
-            </div>
-            <div className="gallery_min_gallery_1">
-            <img className="gallery_min_gallery_1_img_01" src="/grid_09.jpg" alt="" />
-            </div>
-            <div className="gallery_min_gallery_1">
-            <img className="gallery_min_gallery_1_img_01" src="/grid_10.jpg" alt="" />
-            </div>
-            <div className="gallery_min_gallery_1">
-            <img className="gallery_min_gallery_1_img_01" src="/grid_11.jpg" alt="" />
-            </div>
-            <div className="gallery_min_gallery_1">
-            <img className="gallery_min_gallery_1_img_01" src="/grid_12.jpg" alt="" />
-            </div>
-          </div>
           </div>
         </div>
         {/* Next Component */}
         <div className="faq_main">
           <div className="faq_min">
-            <div className="faq_min_text">
-              FAQ
-            </div>
+            <div className="faq_min_text">FAQ</div>
             <FAQComponent />
           </div>
         </div>
         {/* Next Component */}
         <div className="book_your_session_main">
-           <div className="book_your_session_min">
+          <div className="book_your_session_min">
             <div className="book_your_session_min_today_main">
               <div className="book_your_session_min_today_main_text">
-              BOOK YOUR SESSION TODAY
+                BOOK YOUR SESSION TODAY
               </div>
               <div className="book_your_session_min_today_main_form_01">
                 <form className="form_001">
-                  <input className="fname" 
-                  type="text" name="" id="" placeholder="First Name" />
-                  <input className="lname"
-                  type="text" name="" id="" placeholder="Last Name" /> 
+                  <input
+                    className="fname"
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="First Name"
+                  />
+                  <input
+                    className="lname"
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="Last Name"
+                  />
                 </form>
               </div>
               <div className="book_your_session_min_today_main_form_01">
                 <form className="form_001">
-                  <input className="fname"
-                  type="tel" name="" id="" placeholder="Phone Number"/>
-                  <input className="lname"
-                  type="email" name="" id=""  placeholder="Email Address"/>
+                  <input
+                    className="fname"
+                    type="tel"
+                    name=""
+                    id=""
+                    placeholder="Phone Number"
+                  />
+                  <input
+                    className="lname"
+                    type="email"
+                    name=""
+                    id=""
+                    placeholder="Email Address"
+                  />
                 </form>
               </div>
               <div className="book_your_session_min_today_main_form_02">
-                <input className="date_session"
-                 type="text" name="" id="" placeholder="Preffered Date of Session"/>
+                <input
+                  className="date_session"
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Preffered Date of Session"
+                />
               </div>
               <div className="book_your_session_min_today_main_button_div">
-              <button className="book_your_session_min_today_main_button">
-                SEND <IoCaretForwardSharp />
-              </button>
+                <button className="book_your_session_min_today_main_button">
+                  SEND <IoCaretForwardSharp />
+                </button>
               </div>
             </div>
-           </div>
+          </div>
         </div>
         {/* Next Component */}
         <div className="price_list_main_pic">
           <div className="price_list_min_pic">
-            <img className="price_list_min_pic_pic" src="/pricelist_02.jpg" alt="" />
+            <img
+              className="price_list_min_pic_pic"
+              src="/pricelist_02.jpg"
+              alt=""
+            />
           </div>
         </div>
       </div>

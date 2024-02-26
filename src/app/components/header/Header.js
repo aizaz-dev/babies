@@ -135,7 +135,7 @@ const Header = () => {
                 <div className="dropdown-content">
                   <ul>
                     <li>
-                      <Link href="/portfolio/long-island">Newborns Portraits</Link>
+                      <Link href="/newborns-portraits">Newborns Portraits</Link>
                     </li>
                     <li>
                       <Link href="/portfolio/maternity">Maternity Photography</Link>

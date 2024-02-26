@@ -25,14 +25,20 @@
         }
         .professional-wrapper{
             width: 100%;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
             flex-wrap: wrap;
+            justify-content: space-between;
             gap: 5px;
+            @include tab{
+                grid-template-columns: 1fr 1fr;
+            }
             @include xtablet{
                 flex-direction: column;
+                grid-template-columns: 1fr;
             }
             .emily-photography{
-                width: 33%;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -96,7 +102,7 @@
             }
             // milestone session
             .milestone-session{
-                width: 33%;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -160,7 +166,7 @@
             }
             // holiday session
             .holiday-session{
-                width: 33%;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;

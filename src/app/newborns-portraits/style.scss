@@ -1,431 +1,436 @@
 @import "../Styles/app.scss";
-*{
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Catamaran:wght@100..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Catamaran:wght@100..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ms+Madi&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Catamaran:wght@100..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100..900;1,100..900&family=Ms+Madi&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+* {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-// start text
-.start{
-background-color: #FBF7F6;
-height: 289px;
-.protfolio{
-  font-size:24px;
-  font-family:"Antic Didone", sans-serif  ;
-  letter-spacing:normal ;
-  color: #2f3640 ;
-  text-align: center;
-padding-top: 60px;
-letter-spacing: 1px;
-line-height: 34px;
-}
-}
-.newborn{
-  font-size: 48px;
-  font-family:"Antic Didone", sans-serif  ;
-  color:#bb8aa0 ;
-  letter-spacing:1px ;
-  line-height: 72px;
-  text-align: center;
-  margin-top: 15px;
-}
-// flex portion
-.flex{
- display: flex;
- flex-wrap: wrap;
+
+  // start text
+  .start {
+    background-color: #fbf7f6;
+    // height: 289px;
+    padding: 80px 0px;
+    .protfolio {
+      font-size: 24px;
+      font-family: "Antic Didone", sans-serif;
+      letter-spacing: normal;
+      color: #2f3640;
+      text-align: center;
+      padding-top: 60px;
+      letter-spacing: 1px;
+      line-height: 34px;
+    }
+  }
+  .newborn {
+    font-size: 48px;
+    font-family: "Antic Didone", sans-serif;
+    color: #bb8aa0;
+    letter-spacing: 1px;
+    line-height: 72px;
+    text-align: center;
+    margin-top: 15px;
+  }
+  // flex portion
+  .maincont{
+    background-color: #fbf7f6;
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
     gap: 5px;
-padding-bottom: 100px;
-  justify-content: center;
-  background-color: #FBF7F6;;
-  
-  
- 
-.pic1{
-  background-image: url("/n1.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} 
-.pic2{
-  background-image: url("/n2.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} 
-.pic3{
-  background-image: url("/n3.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
-.pic4{
-  background-image: url("/n4.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} 
-.pic5{
-  background-image: url("/n5.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} 
-.pic6{
-  background-image: url("/n6.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} .pic7{
-  background-image: url("/n7.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} .pic8{
-  background-image: url("/n8.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic9{
-  background-image: url("/n9.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} 
-.pic10{
-  background-image: url("/n10.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic11{
-  background-image: url("/n11.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic12{
-  background-image: url("/n12.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic13{
-  background-image: url("/n13jpg.");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} 
-.pic14{
-  background-image: url("/n14.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} 
-.pic15{
-  background-image: url("/n15.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} 
-.pic16{
-  background-image: url("/n16.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} 
-.pic17{
-  background-image: url("/n17.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} .pic18{
-  background-image: url("/n18.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} 
-.pic19{
-  background-image: url("/n19.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic20{
-  background-image: url("/n20.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic21{
-  background-image: url("/n21.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} 
-.pic22{
-  background-image: url("/n22.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic23{
-  background-image: url("/n23.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic24{
-  background-image: url("/n24.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic25{
-  background-image: url("/n25.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic26{
-  background-image: url("/n26.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic27{
-  background-image: url("/n27.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic28{
-  background-image: url("/n28.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic29{
-  background-image: url("/n29.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic30{
-  background-image: url("/n30.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic31{
-  background-image: url("/n31.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic32{
-  background-image: url("/n32.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} 
-.pic33{
-  background-image: url("/n33jpg.");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic34{
-  background-image: url("/n34.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic35{
-  background-image: url("/n35.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} 
-.pic36{
-  background-image: url("/n36.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} 
-.pic37{
-  background-image: url("/n37jpg.");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
- .pic38{
-  background-image: url("/n38.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} 
-.pic39{
-  background-image: url("/n39.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} .pic40{
-  background-image: url("/n40.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} 
-.pic41{
-  background-image: url("/n41.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
-.pic42{
-  background-image: url("/n42.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-} 
-.pic43{
-  background-image: url("/n43.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
-.pic44{
-  background-image: url("/n44.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
-.pic45{
-  background-image: url("/n45.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
-.pic46{
-  background-image: url("/n46.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-  
-}
-.pic47{
-  background-image: url("/n47.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
+    padding-bottom: 100px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
 
-}
-.pic48{
-  background-image: url("/n48.jpg");
-  height:125px ;
-  width:223px ;
-  background-size: cover; 
-}
-}
-// main text
+    .pic1 {
+      background-image: url("/n1.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic2 {
+      background-image: url("/n2.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic3 {
+      background-image: url("/n3.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic4 {
+      background-image: url("/n4.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic5 {
+      background-image: url("/n5.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic6 {
+      background-image: url("/n6.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic7 {
+      background-image: url("/n7.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic8 {
+      background-image: url("/n8.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic9 {
+      background-image: url("/n9.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic10 {
+      background-image: url("/n10.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic11 {
+      background-image: url("/n11.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic12 {
+      background-image: url("/n12.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic13 {
+      background-image: url("/n13jpg.");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic14 {
+      background-image: url("/n14.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic15 {
+      background-image: url("/n15.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic16 {
+      background-image: url("/n16.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic17 {
+      background-image: url("/n17.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic18 {
+      background-image: url("/n18.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic19 {
+      background-image: url("/n19.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic20 {
+      background-image: url("/n20.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic21 {
+      background-image: url("/n21.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic22 {
+      background-image: url("/n22.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic23 {
+      background-image: url("/n23.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic24 {
+      background-image: url("/n24.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic25 {
+      background-image: url("/n25.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic26 {
+      background-image: url("/n26.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic27 {
+      background-image: url("/n27.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic28 {
+      background-image: url("/n28.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic29 {
+      background-image: url("/n29.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic30 {
+      background-image: url("/n30.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic31 {
+      background-image: url("/n31.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic32 {
+      background-image: url("/n32.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic33 {
+      background-image: url("/n33jpg.");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic34 {
+      background-image: url("/n34.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic35 {
+      background-image: url("/n35.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic36 {
+      background-image: url("/n36.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic37 {
+      background-image: url("/n37jpg.");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic38 {
+      background-image: url("/n38.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic39 {
+      background-image: url("/n39.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic40 {
+      background-image: url("/n40.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic41 {
+      background-image: url("/n41.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic42 {
+      background-image: url("/n42.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic43 {
+      background-image: url("/n43.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic44 {
+      background-image: url("/n44.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic45 {
+      background-image: url("/n45.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic46 {
+      background-image: url("/n46.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic47 {
+      background-image: url("/n47.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+    .pic48 {
+      background-image: url("/n48.jpg");
+      height: 125px;
+      width: 223px;
+      background-size: cover;
+    }
+  }}
+  // main text
+.txtmain{
+  padding: 0px 80px;
+  @include tab{
+    padding: 0px 40px;
 
-.mtext{
-  font-size: 24px;
-  color: #2F3640;
-  line-height: 36px;
-  letter-spacing: 1px;
-  margin-top: 91px;
-margin-left: 21%;
-margin-right: 21%;
-font-family: "Antic Didone", sans-serif;
-font-weight: 400;
-text-align: justify;
+  }
+  @include xtablet{
+    padding: 0px 28px;
+  }
+  .mtext {
+    font-size: 24px;
+    max-width: 900px;
+    margin: auto;
+    color: #2f3640;
+    line-height: 36px;
+    letter-spacing: 1px;
+    margin-top: 91px;
+    
+    font-family: "Antic Didone", sans-serif;
+    font-weight: 400;
+    text-align: justify;
 
-@include laptop{
-  margin-left: 10%;
-  margin-right: 10%;
-}
-@include mobile{
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-}
-// let text
-.let{
-  margin-left: 23%;
-  margin-right: 21%;
-  color: #bb8aa0;
-  font-size: 48px;
-  line-height: 72px;
-  font-family:"Antic Didone", sans-serif;
-  letter-spacing: 1px;
-  text-align: justify;
-
-  @include laptop{
-    margin-left: 10%;
-    margin-right: 10%;
    
   }
-  @include mobile{
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 100%;
-  }
-}
-.Itext{
-  font-size: 24px;
-  color: #2F3640;
-  line-height: 36px;
-  letter-spacing: 1px;
-text-align: center;
-text-align: justify;
-margin-left: 21%;
-margin-right: 21%;
-font-family: "Antic Didone", sans-serif;
-font-weight: 400;
-@include laptop{
-  margin-left: 10%;
-  margin-right: 10%;
-}
-@include mobile{
-  margin-left: 10%;
-  margin-right: 10%;
-}
-}
-.span{
-  background-color:rgb(177,125,148) ;
-  height: 76px;
-  width:30% ;
-  display: flex;
-  align-items: center;
-  margin: auto;
-  margin-top: 36px;
-  margin-bottom: 20px; 
-text-align: center;
-border-radius: 5px;
-@include laptop{
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-@include mobile{
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-.session{
-  color: white;
-  font-size: 24px;
-  line-height: 36px;
-  letter-spacing: normal;
-  font-family:"Antic Didone", sans-serif;
-padding-left: 15%;
-@include laptop{
-  padding-left: 30%;
-}
-@include mobile{
-  padding-left: 8%;
-}
-}
+  // let text
+  .let {
+  
+    color: #bb8aa0;
+    font-size: 48px;
+    line-height: 72px;
+    font-family: "Antic Didone", sans-serif;
+    letter-spacing: 1px;
+    text-align: justify;
+    max-width: 900px;
+    margin: auto;
 
+
+   
+  }
+  .Itext {
+    font-size: 24px;
+    color: #2f3640;
+    line-height: 36px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-align: justify;
+  
+    font-family: "Antic Didone", sans-serif;
+    font-weight: 400;
+    max-width: 900px;
+    margin: auto;
+
+    @include laptop {
+    
+    }
+    @include mobile {
+     
+    }
+  }
+  .span {
+    background-color: rgb(177, 125, 148);
+    height: 76px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 36px;
+    margin-bottom: 50px;
+    // margin-bottom: 20px;
+    text-align: center;
+    border-radius: 5px;
+    @include laptop {
+      width: 80%;
+    
+    }
+    @include mobile {
+      width: 80%;
+     
+    }
+    .session {
+      color: white;
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: normal;
+      font-family: "Antic Didone", sans-serif;
+      // padding-left: 15%;
+      @include laptop {
+        // padding-left: 30%;
+      }
+      @include mobile {
+        // padding-left: 8%;
+      }
+    }
+  }
 }
 }

@@ -1,8 +1,10 @@
+import Testimonials from "@/app/components/cardslide/CardSlide";
 import "./style.scss";
 
 const page = () => {
   return (
     <div>
+      
       {/* first part pricelist */}
       <div className="prize-list">
         <div className="cake-smashe">
@@ -33,7 +35,9 @@ const page = () => {
             </div>
             {/* RESERVE YOUR SESSION */}
             <div className="photographer-wrapper1">
-              <p className="reserved-seesion">RESERVE YOUR SESSION</p>
+              <p className="reserved-seesion">
+                RESERVE YOUR <br /> SESSION
+              </p>
               <p className="limited-spot">LIMITED SPOTS AVAILABLE</p>
               <div className="option">
                 <input
@@ -88,71 +92,15 @@ const page = () => {
           <div className="Review-on-google">5 Star Reviews on Google</div>
         </div>
 
-        <div className="boxes-testimonial">
-          {/* box1 */}
-          <div className="box1">
-            <p className=" Claudette">
-              {" "}
-              <i>
-                Simply amazing. Claudette is laid back and so so easy to work
-                with. She is so humble and quick at capturing the best moments.
-                Would highly recommended it!
-              </i>
-            </p>
-            <div className="name">SONIA P</div>
-
-            <div className="star">
-              <img src="/icon.png" alt="" className="icon-star" />
-              <img src="/icon.png" alt="" className="icon-star" />
-              <img src="/icon.png" alt="" className="icon-star" />
-              <img src="/icon.png" alt="" className="icon-star" />
-              <img src="/icon.png" alt="" className="icon-star" />
-            </div>
-          </div>
-          {/* box2 */}
-          <div className="box1">
-            <p className=" Claudette">
-              {" "}
-              <i>
-                We&apos;ve used Cydnee from CLJ photography for the past 4yr. She is
-                absouletly amazing and we just look work.She&apos;s patience kind and
-                takes the most beautiful picture.
-              </i>
-            </p>
-            <div className="name">KIM BLAKELY</div>
-            <div className="star">
-              <img src="/icon.png" alt="" className="icon-star" />
-              <img src="/icon.png" alt="" className="icon-star" />
-              <img src="/icon.png" alt="" className="icon-star" />
-              <img src="/icon.png" alt="" className="icon-star" />
-              <img src="/icon.png" alt="" className="icon-star" />
-            </div>
-          </div>
-          {/* box3 */}
-          <div className="box1">
-            <p className=" Claudette">
-              <i>
-                CYDNEE IS AMAZING. She took what was an extremely difficult
-                pregancy and left me with stunning images that reminder me i am
-                strong plus her gown wardrobe.!
-              </i>
-            </p>
-            <div className="name">SHANNON MARTINO</div>
-            <div className="star">
-              <img src="/icon.png" alt="" className="icon-star" />
-              <img src="/icon.png" alt="" className="icon-star" />
-              <img src="/icon.png" alt="" className="icon-star" />
-              <img src="/icon.png" alt="" className="icon-star" />
-              <img src="/icon.png" alt="" className="icon-star" />
-            </div>
-          </div>
-        </div>
+        <Testimonials/>
         {/* {/* Testimonials  end   *}                */}
       </div>
       {/* photography baby girl */}
       <div className="photo-p">
         <div className="image-p">
-          <div className="baby-girl"></div>
+          <div className="baby-girl">
+            <img src="/babygirl.jpg" alt="" className="imgbga"/>
+          </div>
         </div>
         <div className="text-p">
           <div className="text1">
@@ -204,7 +152,7 @@ const page = () => {
           <div className="wrapper">
             <div>
               <h1 className="welcome">
-                <i>Welcome to</i>
+                <p>Welcome to</p>
               </h1>
               <h2 className="CJI-wrap">WELCOME TO CLJ PHOTOGRAPHY</h2>
               <h4 className="cake">Long Island Cake Smash Photography</h4>
