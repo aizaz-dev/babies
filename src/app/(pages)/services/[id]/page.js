@@ -6,23 +6,20 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import ServiceSlide from "./ServiceSlide";
 
-const page = () => {
-
+const Page = () => {
   const { id } = useParams();
   const filteredData = data.find((item) => {
     return item.slug === id;
   });
   console.log(id);
   console.log(filteredData);
-  
-   
 
-
-  
   return (
     <div>
       <div className="flex1">
-        <div className="img1"><ServiceSlide/></div>
+        <div className="img1">
+          <ServiceSlide />
+        </div>
         <div className="portion2">
           <div className="maternity">{filteredData.maternity}</div>
           <div className="pricing">{filteredData.pricing}</div>
@@ -78,8 +75,14 @@ const page = () => {
         </div>
       </div>
       <div className="flex3">
-        <div className="box1" dangerouslySetInnerHTML={{__html:filteredData.addInfo}}></div>
-        <div className="box1" dangerouslySetInnerHTML={{__html:filteredData.addinfo2}}></div>
+        <div
+          className="box1"
+          dangerouslySetInnerHTML={{ __html: filteredData.addInfo }}
+        ></div>
+        <div
+          className="box1"
+          dangerouslySetInnerHTML={{ __html: filteredData.addinfo2 }}
+        ></div>
         <div
           className="box1"
           dangerouslySetInnerHTML={{ __html: filteredData.addinfo3 }}
@@ -89,4 +92,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

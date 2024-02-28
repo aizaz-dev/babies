@@ -1,15 +1,13 @@
 import React from "react";
 import "./home.scss";
-import MainSlider from "../components/mainslider/MainSlide";
-import SlideTwo from "../components/slidetwo/SlideTwo";
-
+import MainSlider from "../../components/mainslider/MainSlide";
+import SlideTwo from "../../components/slidetwo/SlideTwo";
 
 const Home = () => {
   return (
     <main>
       {/* newborn upper pic */}
       <div className="new-p">
-        
         {/* <img src="./image1.jpg" alt="" className='smile-wrap' /> */}
         <MainSlider />
       </div>
@@ -21,7 +19,6 @@ const Home = () => {
             <div className="island">
               Long Island New Born
               <div className="island1">PhotoGrapher</div>
-              
             </div>
           </div>
 
@@ -331,7 +328,7 @@ const Home = () => {
             </div>
             {/* second part */}
             {/* part a kesh */}
-            <SlideTwo/>
+            <SlideTwo />
             {/* exce rate end */}
           </div>
           {/* preparing for you new born baby photography */}

@@ -1,0 +1,478 @@
+@import "../../Styles/app.scss";
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+
+  .flex1 {
+    margin: auto;
+    display: flex;
+    @include mobile {
+      flex-direction: column;
+    }
+    @include laptop {
+      flex-direction: column;
+    }
+    .img1 {
+      // height: 750px;
+      height: 70vh;
+      width: 65%;
+      // width: 805px;
+      background-image: url(/girl1.jpg);
+      background-size: cover;
+      background-position: center;
+      @include mobile {
+        width: 100%;
+        background-size: cover;
+      }
+      @include laptop {
+        width: 100%;
+        background-size: cover;
+      }
+    }
+    .portion2 {
+      // width: 447px;
+      width: 35%;
+      text-align: center;
+      padding-top: 50px;
+      @include laptop {
+        width: 100%;
+      }
+      .maternity {
+        font-size: 32px;
+        font-family: "Times New Roman", Times, serif;
+        line-height: 46px;
+        letter-spacing: 1px;
+        color: #2f3640;
+        margin-top: 20px;
+        font-weight: 400;
+      }
+      .pricing {
+        font-size: 20px;
+        color: #717e91;
+        line-height: 30px;
+        text-align: center;
+        font-family: "Times New Roman", Times, serif;
+        margin-top: 30px;
+      }
+      .price {
+        font-size: 22px;
+        color: #bb8aa0;
+        line-height: 32px;
+        text-align: center;
+        font-family: "Times New Roman", Times, serif;
+        margin-top: 15px;
+        letter-spacing: 0.5px;
+        font-weight: bold;
+      }
+      .view {
+        font-size: 17px;
+        color: #bb8aa0;
+        line-height: 32px;
+        text-align: center;
+        font-family: "Times New Roman", Times, serif;
+        margin-top: 15px;
+        letter-spacing: 0.5px;
+        // padding-left: 13px;
+      }
+      .span1 {
+        background-color: rgb(177, 125, 148);
+        height: 76px;
+        width: 80%;
+        padding: 15px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        border-radius: 5px;
+        color: white;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: normal;
+        font-family: "Antic Didone", sans-serif;
+      }
+      .next {
+        font-size: 17px;
+        font-family: "Antic Didone", sans-serif;
+        text-align: justify;
+        color: #717e91;
+        letter-spacing: normal;
+        line-height: 40px;
+        text-align: center;
+      }
+    }
+  }
+  .myown {
+    max-width: 700px;
+    margin: auto;
+    padding: 0px 50px 50px 50px;
+    @include tab {
+      padding: 0px 28px 50px 28px;
+    }
+    .text1 {
+      font-size: 40px;
+      font-family: "Times New Roman", Times, serif;
+      text-align: start;
+      color: #1e293b;
+      letter-spacing: 0.5px;
+      line-height: 56px;
+      margin-top: 94px;
+      // text-align: center;
+
+      @include mobile {
+        // width: fit-content;
+
+        letter-spacing: normal;
+        margin-top: 20px;
+      }
+      @include laptop {
+        letter-spacing: normal;
+        margin-top: 20px;
+      }
+    }
+
+    .text2 {
+      font-size: 32px;
+      font-family: "Times New Roman", Times, serif;
+      text-align: justify;
+      color: #1e293b;
+      letter-spacing: 0.5px;
+      line-height: 56px;
+      // text-align: center;
+
+      @include mobile {
+        letter-spacing: normal;
+        margin-top: 20px;
+        letter-spacing: normal;
+      }
+      @include laptop {
+        letter-spacing: normal;
+      }
+    }
+    .text3 {
+      font-size: 17px;
+      font-family: "Antic Didone", sans-serif;
+      text-align: justify;
+      color: #717e91;
+      letter-spacing: normal;
+      line-height: 25.6px;
+      // text-align: center;
+
+      @include mobile {
+        width: 100%;
+
+        letter-spacing: normal;
+        margin-top: 20px;
+        letter-spacing: normal;
+      }
+      @include laptop {
+        letter-spacing: normal;
+        margin-top: 20px;
+      }
+    }
+    .img2 {
+      width: 805px;
+      height: 537px;
+      background-image: url(/girl2.jpg);
+      background-size: cover;
+
+      margin-top: 20px;
+      @include mobile {
+        width: 100%;
+        background-size: cover;
+      }
+      @include laptop {
+        width: 100%;
+        background-size: cover;
+      }
+    }
+    .text4 {
+      font-size: 32px;
+      font-family: "Times New Roman", Times, serif;
+      text-align: justify;
+      color: #1e293b;
+      letter-spacing: 0.5px;
+      line-height: 56px;
+      // text-align: center;
+
+      margin-top: 22px;
+      @include mobile {
+        width: fit-content;
+
+        letter-spacing: normal;
+        margin-top: 20px;
+        letter-spacing: normal;
+      }
+      @include laptop {
+        width: fit-content;
+
+        letter-spacing: normal;
+      }
+    }
+    .img3 {
+      width: 805px;
+      height: 537px;
+      background-image: url(/girl3.jpg);
+      background-size: cover;
+
+      margin-top: 20px;
+      margin-bottom: 25px;
+      @include mobile {
+        width: 100%;
+        background-size: cover;
+      }
+      @include laptop {
+        width: 100%;
+        background-size: cover;
+      }
+    }
+    .img4 {
+      width: 300px;
+      height: 200px;
+      background-image: url(/girl4.jpg);
+      background-size: cover;
+
+      margin-top: 20px;
+      margin-bottom: 25px;
+      @include mobile {
+        background-size: cover;
+      }
+      @include laptop {
+        background-size: cover;
+      }
+    }
+    .text5 {
+      font-size: 32px;
+      font-family: "Times New Roman", Times, serif;
+      text-align: justify;
+      color: #1e293b;
+      letter-spacing: 0.5px;
+      line-height: 40px;
+      // text-align: center;
+
+      @include mobile {
+        width: fit-content;
+
+        letter-spacing: normal;
+        margin-top: 20px;
+        letter-spacing: normal;
+      }
+      @include laptop {
+        width: fit-content;
+
+        letter-spacing: normal;
+      }
+    }
+    .img5 {
+      width: 200px;
+      height: 300px;
+      background-image: url(/girl5.jpg);
+      background-size: cover;
+
+      margin-top: 20px;
+      margin-bottom: 25px;
+      @include mobile {
+        background-size: cover;
+      }
+      @include laptop {
+        background-size: cover;
+      }
+    }
+    .img6 {
+      width: 683px;
+      height: 1024px;
+      background-image: url(/girl6.jpg);
+      background-size: cover;
+
+      margin-top: 140px;
+      margin-bottom: 25px;
+      @include mobile {
+        width: 100%;
+        background-size: cover;
+      }
+      @include laptop {
+        width: 100%;
+        background-size: cover;
+      }
+    }
+    .img7 {
+      width: 805px;
+      height: 538px;
+      background-image: url(/girl7.jpg);
+      background-size: cover;
+
+      margin-top: 70px;
+      margin-bottom: 25px;
+      @include mobile {
+        width: 100%;
+        background-size: cover;
+      }
+      @include laptop {
+        width: 100%;
+        background-size: cover;
+      }
+    }
+    .img8 {
+      width: 300px;
+      height: 500px;
+      background-image: url(/girl8.jpg);
+      background-size: cover;
+      object-fit: cover;
+
+      margin-top: 20px;
+      margin-bottom: 25px;
+      @include mobile {
+        background-size: cover;
+      }
+      @include laptop {
+        background-size: cover;
+      }
+    }
+    .img9 {
+      width: 805px;
+      height: 532px;
+      background-image: url(/girl9.jpg);
+      background-size: cover;
+
+      margin-top: 20px;
+      @include mobile {
+        width: 100%;
+        background-size: cover;
+      }
+      @include laptop {
+        width: 100%;
+        background-size: cover;
+      }
+    }
+    .text6 {
+      font-size: 32px;
+      font-family: "Times New Roman", Times, serif;
+      text-align: justify;
+      color: #1e293b;
+      letter-spacing: 0.5px;
+      line-height: 40px;
+      // text-align: center;
+
+      margin-top: 30px;
+      @include mobile {
+        width: fit-content;
+
+        letter-spacing: normal;
+        margin-top: 20px;
+        letter-spacing: normal;
+      }
+      @include laptop {
+        width: fit-content;
+
+        letter-spacing: normal;
+      }
+    }
+    .text7 {
+      font-size: 26px;
+      font-family: "Times New Roman", Times, serif;
+      text-align: justify;
+      color: #1e293b;
+      letter-spacing: 0.5px;
+      line-height: 31.2px;
+      // text-align: center;
+
+      @include mobile {
+        width: fit-content;
+
+        letter-spacing: normal;
+        margin-top: 20px;
+        letter-spacing: normal;
+      }
+      @include laptop {
+        width: fit-content;
+
+        letter-spacing: normal;
+      }
+    }
+    .text8 {
+      font-size: 30px;
+      line-height: 40px;
+      letter-spacing: 1px;
+      color: #2f3640;
+      text-align: center;
+      margin-top: 40px;
+      font-family: "Times New Roman", Times, serif;
+    }
+    .flex2 {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+
+      @include mobile {
+        flex-direction: column;
+      }
+      @include laptop {
+      }
+      .div2{
+      width: 100%;
+      .text9 {
+        font-size: 16px;
+        line-height: 25.6px;
+        letter-spacing: 1px;
+        color: #2f3640;
+        margin-top: 20px;
+        font-family: AvenirLight, sans-serif;
+        font-weight: bold;
+      }
+      .input1 {
+        height: 50px;
+        // width: 350px;
+        width: 100%;  
+        border: 1px solid #334155;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        padding-left: 5px;
+      }
+      .input1:hover {
+        border: 1px dashed black;
+        transition: 0.8s ease-in;
+      }
+    }
+  }
+    .input2 {
+      height: 100px;
+      width: 100%;
+      border: 1px solid #334155;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+     padding-left: 20px;
+      margin-top: 50px;
+      background-color: white;
+    }
+    .input2:hover {
+      border: 1px solid #bb8aa0;
+      transition: 0.8s ease-in;
+    }
+    
+    .span {
+      background-color: rgb(177, 125, 148);
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // padding-bottom: 50px;
+      margin: auto;
+      margin-top: 50px;
+      text-align: center;
+      border-radius: 5px;
+
+      .session {
+        color: white;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: normal;
+        font-family: "Times New Roman", Times, serif;
+        padding: 15px;
+        text-align: center;
+        white-space: nowrap;
+      }
+    }
+  }
+}

@@ -1,0 +1,1070 @@
+/*
+===============
+RESET CSS
+===============
+*/
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Catamaran:wght@100..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Catamaran:wght@100..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ms+Madi&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Catamaran:wght@100..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100..900;1,100..900&family=Ms+Madi&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+/*
+======X=========
+RESET CSS
+======X=========
+*/
+.new-p {
+  width: 100%;
+  .smile-wrap {
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+  }
+}
+.long-island {
+  width: 100%;
+  .long-island-wrap {
+    max-width: 1100px;
+    padding: 0px 30px;
+    margin: 50px auto;
+    width: 100%;
+
+    // .long
+    .island-p {
+      display: flex;
+      justify-content: center;
+      font-family: "Antic Didone";
+font-weight: 100;
+      @media screen and (max-width: 729px) {
+        display: flex;
+        flex-direction: row;
+      }
+      .island {
+        color: #be8fa4;
+        font-size: 48px;
+        font-family: "Antic Didone";
+        font-weight:100;
+
+
+
+        @media screen and (max-width: 729px) {
+          font-size: 35px;
+        }
+        @media screen and (max-width: 395px) {
+          font-size: 25px;
+        }
+        .island1 {
+          color: #be8fa4;
+          font-size: 48px;
+          font-weight: 100;
+          padding-left: 70px;
+          font-family: "Antic Didone";
+
+
+
+          @media screen and (max-width: 729px) {
+            font-size: 35px;
+          }
+          @media screen and (max-width: 395px) {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+    .birthday-p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 60px;
+      margin-top: 100px;
+
+      @media screen and (max-width: 729px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      @media screen and (max-width: 925px) {
+        gap: 70px;
+      }
+      .Newborn-wraper {
+        text-align: center;
+        color: #484e57;
+        font-weight: lighter;
+        font-family: "Antic Didone";
+
+
+        font-size: 25px;
+      }
+      // .image1{
+
+      .image-wrap {
+        width: 70%;
+        border-radius: 50%;
+        margin-left: 70px;
+        margin-top: 30px;
+        @media screen and (max-width: 729px) {
+          width: 100%;
+          margin-left: 0px;
+        }
+      }
+      .image-wrap:hover {
+        background-color: #885767;
+      }
+
+      // .image2{
+
+      .image-wrap1 {
+        width: 70%;
+        border-radius: 50%;
+        margin-left: 70px;
+        margin-top: 30px;
+        @media screen and (max-width: 729px) {
+          width: 100%;
+          margin-left: 0px;
+        }
+      }
+    }
+    // family part
+    .strong2-wrap {
+      color: #484e57;
+      font-size: 20px;
+      font-family: "Antic Didone";
+
+      display: none;
+      @media screen and (max-width: 589px) {
+        display: block;
+      }
+    }
+    .strong {
+      display: flex;
+      justify-content: center;
+      .strong2 {
+        color: #484e57;
+        font-size: 24px;
+        text-align: center;
+        font-family: "Antic Didone";
+
+        @media screen and (max-width: 589px) {
+          display: none;
+        }
+
+        @media screen and (max-width: 695px) {
+          font-size: 20px;
+        }
+        .strong3 {
+          font-family: "Playfair Display", serif;
+          // padding-left: 240px;
+          color: #484e57;
+          font-size: 24px;
+          @media screen and (max-width: 695px) {
+            font-size: 20px;
+            padding-left: 150px;
+          }
+        }
+      }
+      .btn-p {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+
+        .btn {
+          font-size: 25px;
+          font-family: "Antic Didone", sans-serif;
+          background-color: #be8fa4;
+          color: white;
+          padding: 20px 70px 20px 70px;
+          border-radius: 5px;
+          border: #484e57;
+          cursor: pointer;
+          transition: 0.5s ease-in-out 0.5s;
+
+          @media screen and (max-width: 589px) {
+            padding: 20px 40px 20px 40px;
+          }
+          @media screen and (max-width: 411px) {
+            padding: 20px 20px 20px 20px;
+            font-size: 20px;
+          }
+        }
+      }
+      .btn:hover {
+        background-color: #da6d9e;
+      }
+
+      // strong end
+    }
+
+    // long island wrap end
+  }
+}
+// Excellent part
+.exce-rate {
+  max-width: 1200px;
+  padding: 0px 30px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  @media screen and (max-width: 1075px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .exce-rate-1 {
+    width: 30%;
+    padding-left: 120px;
+    @media screen and (max-width: 1075px) {
+      padding-left: 70px;
+    }
+
+    @media screen and (max-width: 857px) {
+      width: 50%;
+    }
+    @media screen and (max-width: 579px) {
+      width: 60%;
+    }
+    @media screen and (max-width: 400px) {
+      width: 80%;
+    }
+    @media screen and (max-width: 289px) {
+      width: 100%;
+    }
+
+    .Excellent-wrap {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 25px;
+      padding-left: 10px;
+      padding-top: 40px;
+      font-weight: 700;
+    }
+    .icon {
+      width: 10%;
+      height: 5%;
+      padding-top: 6px;
+    }
+    .base-p {
+      font-family: "Open sans";
+      font-size: 18px;
+      padding-top: 6px;
+      span {
+        font-family: "Open sans";
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+    .google {
+      width: 50%;
+      padding-left: 10px;
+      padding-top: 6px;
+    }
+  }
+  // part a kesh
+  .excellent-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    @media screen and (max-width: 1075px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .exce-rate-2 {
+      width: 25%;
+      border-radius: 5px;
+      padding: 20px;
+      background-color: #f4f4f4;
+      @media screen and (max-width: 857px) {
+        width: 90%;
+      }
+      .item-p-wrap1 {
+        display: flex;
+        .item-p-wrap {
+          display: flex;
+          .item {
+            width: 20%;
+          }
+          .wrapper-p {
+            padding-left: 10px;
+            padding-top: 10px;
+
+            .item-wrap {
+              font-size: 18px;
+              font-weight: bold;
+              font-family: "Open sans";
+            }
+            .item-wrap1 {
+              font-size: 14px;
+              color: rgb(175, 173, 173);
+              font-family: "Open sans";
+            }
+          }
+        }
+        .google-icon {
+          width: 10%;
+          height: 30%;
+          padding-top: 10px;
+          object-fit: contain;
+        }
+      }
+      .icon {
+        padding-top: 10px;
+        width: 10%;
+      }
+      .para1 {
+        font-family: "Open sans";
+        font-size: 17px;
+      }
+      .anchr {
+        color: #484e57;
+      }
+
+      // exe rate 2 end
+    }
+    // partb natasha
+    //
+    .exce-rate-2 {
+      width: 25%;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: #f4f4f4;
+      @media screen and (max-width: 857px) {
+        width: 90%;
+      }
+      .item-p-wrap1 {
+        display: flex;
+        .item-p-wrap {
+          display: flex;
+          .item {
+            width: 20%;
+          }
+          .wrapper-p {
+            padding-left: 10px;
+            padding-top: 10px;
+
+            .item-wrap-Natasha {
+              font-size: 15px;
+              font-weight: bold;
+              font-family: "Open sans";
+            }
+            .item-wrap1 {
+              font-size: 14px;
+              color: rgb(175, 173, 173);
+              font-family: "Open sans";
+            }
+          }
+        }
+        .google-icon {
+          width: 10%;
+          height: 30%;
+          padding-top: 10px;
+          object-fit: contain;
+        }
+      }
+      .icon {
+        padding-top: 10px;
+        width: 10%;
+      }
+      .para1 {
+        font-family: "Open sans";
+        font-size: 17px;
+      }
+      .anchr {
+        color: #484e57;
+      }
+
+      // exe rate 2 end
+    }
+    // partc kara kelty
+    .exce-rate-2 {
+      width: 25%;
+      border-radius: 5px;
+      padding: 20px;
+      background-color: #f4f4f4;
+      @media screen and (max-width: 857px) {
+        width: 90%;
+      }
+      .item-p-wrap1 {
+        display: flex;
+        .item-p-wrap {
+          display: flex;
+          .item {
+            width: 20%;
+          }
+          .wrapper-p {
+            padding-left: 10px;
+            padding-top: 10px;
+
+            .item-wrap-kara {
+              font-size: 18px;
+              font-weight: bold;
+              font-family: "Open sans";
+            }
+            .item-wrap1 {
+              font-size: 14px;
+              color: rgb(175, 173, 173);
+              font-family: "Open sans";
+            }
+          }
+        }
+        .google-icon {
+          width: 10%;
+          height: 30%;
+          padding-top: 10px;
+          object-fit: contain;
+        }
+      }
+      .icon {
+        padding-top: 10px;
+        width: 10%;
+      }
+      .para1 {
+        font-family: "Open sans";
+        font-size: 17px;
+        .anchr {
+          color: #484e57;
+        }
+      }
+
+      // exe rate 2 end
+    }
+
+    // excellent wrapper
+  }
+  // exce rate end
+}
+//Meet Claude start
+.flex {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0px 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding-left: 80px;
+  margin-top: 150px;
+  @media screen and (max-width: 1075px) {
+    padding-left: 30px;
+  }
+  @media screen and (max-width: 830px) {
+    display: flex;
+    flex-direction: column;
+  }
+  .name {
+    font-family: "Antic Didone";
+    font-size: 48px;
+    color: #bb8aa0;
+    @media screen and (max-width: 830px) {
+      font-size: 40px;
+    }
+  }
+  .mess {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #2c3e50;
+    padding-top: 40px;
+  }
+  .mess1 {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #2c3e50;
+    padding-top: 20px;
+  }
+  .girl-profile {
+    width: 40%;
+    border-radius: 50%;
+    border: 1px solid gray;
+    object-fit: cover;
+    @media screen and (max-width: 830px) {
+      width: 100%;
+    }
+  }
+}
+// {/* pararaph Ansel Adms */}
+.paragraph {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+
+  .para-p {
+    width: 60%;
+    margin-top: 100px;
+    font-family: "Antic Didone";
+    @media screen and (max-width: 85cd0px) {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 10px;
+    }
+    .Ansel-para {
+      color: #bb8aa0;
+      font-size: 24px;
+      font-family: "Antic Didone";
+
+    }
+  }
+  .Admas-wrapper {
+    color: #bb8aa0;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    text-align: justify;
+  }
+}
+// {/* capturing life */}
+.capture-p {
+  width: 100%;
+  .capture-wrapper {
+    max-width: 1200px;
+    padding: 0px 10px;
+    margin: 120px auto;
+    margin-bottom: 0px;
+    width: 100%;
+    .para-p {
+      font-family: sans-serif;
+      font-size: 40px;
+      font-weight: bolder;
+      @media screen and (max-width: 830px) {
+        font-size: 30px;
+      }
+    }
+    .mess {
+      font-family: sans-serif;
+      font-size: 16px;
+      color: #7a7a7a;
+      padding-top: 10px;
+    }
+    .profile {
+     
+      padding-top: 40px;
+      width: 100%;
+      object-fit: cover;
+    }
+    //  part2
+    .para-p1 {
+      font-family: sans-serif;
+      font-size: 32px;
+      font-weight: bolder;
+      padding-top: 30px;
+
+      @media screen and (max-width: 830px) {
+        font-size: 30px;
+      }
+    }
+    .message1 {
+      font-family: sans-serif;
+      font-size: 18px;
+      color: #7a7a7a;
+      padding-top: 30px;
+    }
+    .message2 {
+      font-family: sans-serif;
+      font-size: 18px;
+      padding-top: 50px;
+      color: #7a7a7a;
+    }
+    .profile {
+      // padding-left: 10px;
+      padding-top: 40px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    //  part3
+    .para-p3 {
+      font-family: sans-serif;
+      font-size: 32px;
+      font-weight: bolder;
+      padding-top: 30px;
+      @media screen and (max-width: 830px) {
+        font-size: 30px;
+      }
+    }
+    .mess1 {
+      font-family: sans-serif;
+      font-size: 18px;
+      color: #7a7a7a;
+      padding-top: 30px;
+    }
+    .profile {
+      // padding-left: 10px;
+      padding-top: 40px;
+      width: 100%;
+      object-fit: cover;
+    }
+    //  part4
+    .para-p3 {
+      font-family: sans-serif;
+      font-size: 32px;
+      font-weight: bolder;
+      padding-top: 30px;
+      @media screen and (max-width: 830px) {
+        font-size: 30px;
+      }
+    }
+    .mess1 {
+      font-family: sans-serif;
+      font-size: 18px;
+      color: #7a7a7a;
+      padding-top: 30px;
+    }
+    .profile {
+      // padding-left: 10px;
+      padding-top: 40px;
+      width: 100%;
+      object-fit: cover;
+    }
+    //  part5
+    .para-p3 {
+      font-family: sans-serif;
+      font-size: 32px;
+      font-weight: bolder;
+      padding-top: 30px;
+      @media screen and (max-width: 830px) {
+        font-size: 30px;
+      }
+    }
+    .mess1 {
+      font-family: sans-serif;
+      font-size: 18px;
+      color: #7a7a7a;
+      padding-top: 30px;
+    }
+    .profile {
+      // padding-left: 10px;
+      padding-top: 40px;
+      width: 100%;
+      object-fit: cover;
+    }
+    //  part6
+    .para-p3 {
+      font-family: sans-serif;
+      font-size: 32px;
+      font-weight: bolder;
+      padding-top: 30px;
+      @media screen and (max-width: 830px) {
+        font-size: 30px;
+      }
+    }
+    .mess1 {
+      font-family: sans-serif;
+      font-size: 18px;
+      color: #7a7a7a;
+      padding-top: 30px;
+    }
+    .profile {
+      // padding-left: 10px;
+      padding-top: 40px;
+      width: 100%;
+      object-fit: cover;
+    }
+    //  part7
+    .para-p3 {
+      font-family: sans-serif;
+      font-size: 20px;
+      color: #7a7a7a;
+      padding-top: 30px;
+    }
+    .mess1 {
+      font-family: sans-serif;
+      font-size: 18px;
+      color: #7a7a7a;
+      padding-top: 30px;
+    }
+    .profile {
+      // padding-left: 10px;
+      padding-top: 40px;
+      width: 100%;
+      object-fit: cover;
+    }
+    //  part8
+    .para-p3 {
+      font-family: sans-serif;
+      font-size: 20px;
+      color: #7a7a7a;
+      padding-top: 30px;
+    }
+    .mess1 {
+      font-family: sans-serif;
+      font-size: 18px;
+      color: #7a7a7a;
+      padding-top: 30px;
+    }
+    .profile {
+      // padding-left: 10px;
+      padding-top: 40px;
+      width: 100%;
+      object-fit: cover;
+    }
+    // part9
+    .para-p3 {
+      font-family: sans-serif;
+      font-size: 20px;
+      color: #7a7a7a;
+      padding-top: 30px;
+    }
+    .mess1 {
+      font-family: sans-serif;
+      font-size: 18px;
+      color: #7a7a7a;
+      padding-top: 30px;
+    }
+    .profile {
+      // padding-left: 10px;
+      padding-top: 40px;
+      width: 100%;
+      object-fit: cover;
+    }
+    // part10
+    .title1 {
+      font-family: sans-serif;
+      font-size: 32px;
+      font-weight: bold;
+      color: black;
+      padding-top: 30px;
+    }
+    .mess1 {
+      font-family: sans-serif;
+      font-size: 18px;
+      color: #7a7a7a;
+      padding-top: 30px;
+    }
+    .profile {
+      // padding-left: 10px;
+      padding-top: 40px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    // capture-wraper end
+  }
+  // capture-pend
+}
+.goal-wrap {
+  width: 100%;
+  .photo-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0px 10px;
+    margin: 120px auto;
+    margin-top: 0px;
+    .Title-goal {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 18px;
+      margin-top: 20px;
+      color: #7a7a7a;
+    }
+    .choose-paragraph {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+      font-size: 18px;
+      color: #535252;
+      padding-top: 30px;
+      font-weight: bold;
+    }
+    .capture {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+      font-size: 18px;
+      color: #7a7a7a;
+      padding-top: 30px;
+    }
+    // Excellent part
+    .exce-rate {
+      display: flex;
+      flex-direction: row;
+      @media screen and (max-width: 1075px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .exce-rate-1 {
+        width: 30%;
+        padding-left: 120px;
+        @media screen and (max-width: 1075px) {
+          padding-left: 70px;
+        }
+
+        @media screen and (max-width: 857px) {
+          width: 50%;
+        }
+        @media screen and (max-width: 579px) {
+          width: 60%;
+        }
+        @media screen and (max-width: 400px) {
+          width: 80%;
+        }
+        @media screen and (max-width: 289px) {
+          width: 100%;
+        }
+
+        .Excellent-wrap {
+          font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+          font-size: 25px;
+          padding-left: 10px;
+          padding-top: 40px;
+          font-weight: 700;
+        }
+        .icon {
+          width: 15%;
+          height: 5%;
+          padding-top: 6px;
+        }
+        .base-p {
+          font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+          font-size: 18px;
+          padding-top: 6px;
+          span {
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            font-size: 18px;
+            font-weight: bold;
+          }
+        }
+        .google {
+          width: 50%;
+          padding-left: 10px;
+          padding-top: 6px;
+        }
+      }
+      // part a kesh
+      .excellent-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        @media screen and (max-width: 1075px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .exce-rate-2 {
+          width: 30%;
+          border-radius: 5px;
+          padding: 20px;
+          background-color: #f4f4f4;
+          @media screen and (max-width: 857px) {
+            width: 90%;
+          }
+          .item-p-wrap1 {
+            display: flex;
+            .item-p-wrap {
+              display: flex;
+              .item {
+                width: 20%;
+              }
+              .wrapper-p {
+                padding-left: 10px;
+                padding-top: 10px;
+
+                .item-wrap {
+                  font-size: 18px;
+                  font-weight: bold;
+                  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+                }
+                .item-wrap1 {
+                  font-size: 14px;
+                  color: rgb(175, 173, 173);
+                  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+                }
+              }
+            }
+            .google-icon {
+              width: 10%;
+              height: 30%;
+              padding-top: 10px;
+              object-fit: contain;
+            }
+          }
+          .icon {
+            padding-top: 10px;
+            width: 10%;
+          }
+          .para1 {
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            font-size: 17px;
+          }
+          .anchr {
+            color: #484e57;
+          }
+
+          // exe rate 2 end
+        }
+        // partb natasha
+        //
+        .exce-rate-2 {
+          width: 30%;
+          padding: 20px;
+          border-radius: 5px;
+          background-color: #f4f4f4;
+          @media screen and (max-width: 857px) {
+            width: 90%;
+          }
+          .item-p-wrap1 {
+            display: flex;
+            .item-p-wrap {
+              display: flex;
+              .item {
+                width: 20%;
+              }
+              .wrapper-p {
+                padding-left: 10px;
+                padding-top: 10px;
+
+                .item-wrap-Natasha {
+                  font-size: 15px;
+                  font-weight: bold;
+                  font-family: "Open sans";
+                }
+                .item-wrap1 {
+                  font-size: 14px;
+                  color: rgb(175, 173, 173);
+                  font-family: "Open sans";
+                }
+              }
+            }
+            .google-icon {
+              width: 10%;
+              height: 30%;
+              padding-top: 10px;
+              object-fit: contain;
+            }
+          }
+          .icon {
+            padding-top: 10px;
+            width: 10%;
+          }
+          .para1 {
+            font-family: "Open sans";
+            font-size: 17px;
+          }
+          .anchr {
+            color: #484e57;
+          }
+
+          // exe rate 2 end
+        }
+        // partc kara kelty
+        .exce-rate-2 {
+          width: 30%;
+          border-radius: 5px;
+          padding: 20px;
+          background-color: #f4f4f4;
+          @media screen and (max-width: 857px) {
+            width: 90%;
+          }
+          .item-p-wrap1 {
+            display: flex;
+            .item-p-wrap {
+              display: flex;
+              .item {
+                width: 20%;
+              }
+              .wrapper-p {
+                padding-left: 10px;
+                padding-top: 10px;
+
+                .item-wrap-kara {
+                  font-size: 18px;
+                  font-weight: bold;
+                  font-family: "Open sans";
+                }
+                .item-wrap1 {
+                  font-size: 14px;
+                  color: rgb(175, 173, 173);
+                  font-family: "Open sans";
+                }
+              }
+            }
+            .google-icon {
+              width: 10%;
+              height: 30%;
+              padding-top: 10px;
+              object-fit: contain;
+            }
+          }
+          .icon {
+            padding-top: 10px;
+            width: 10%;
+          }
+          .para1 {
+            font-family: "Open sans";
+            font-size: 17px;
+            .anchr {
+              color: #484e57;
+            }
+          }
+
+          // exe rate 2 end
+        }
+
+        // excellent wrapper
+      }
+      // exce rate end
+    }
+    // {/* preparing for you new born baby photography */}
+    .prepare {
+      font-size: 20px;
+      color: #4c4d4f;
+      font-weight: bold;
+      font-family: "Open sans";
+      padding-top: 20px;
+    }
+    .message1 {
+      font-size: 18px;
+      color: #4c4d4f;
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+      padding-top: 20px;
+    }
+    .message2 {
+      font-size: 18px;
+      color: #4c4d4f;
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+      padding-top: 30px;
+    }
+    .message3 {
+      font-size: 20px;
+      color: #4c4d4f;
+      font-weight: bold;
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+      padding-top: 30px;
+    }
+    .message4 {
+      font-size: 18px;
+      color: #4c4d4f;
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+      padding-top: 50px;
+    }
+  }
+}

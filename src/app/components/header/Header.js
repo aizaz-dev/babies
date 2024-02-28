@@ -1,8 +1,8 @@
-'use client'
-import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
-import data from '@/app/services/array';
-import './Header.scss';
+"use client";
+import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import data from "@/app/services/array";
+import "./Header.scss";
 import {
   FaPhoneAlt,
   FaTwitter,
@@ -11,9 +11,10 @@ import {
   FaAngleDown,
   FaAngleRight,
   FaBars,
-} from 'react-icons/fa';
-import Link from 'next/link';
-import MobileMenu from './MobileMenu'; // Import the MobileMenu component
+  FaTimes,
+} from "react-icons/fa";
+import Link from "next/link";
+import MobileMenu from "./MobileMenu"; // Import the MobileMenu component
 
 const Header = () => {
   const [servicesDropdownVisible, setServicesDropdownVisible] = useState(false);
@@ -22,8 +23,22 @@ const Header = () => {
   const [portfolioDropdownVisible, setPortfolioDropdownVisible] =
     useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false); // State for mobile menu visibility
-  const mobileMenuRef = useRef(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [closedByOutsideClick, setClosedByOutsideClick] = useState(false);
 
+  const mobileMenuRef = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
+        setIsMobileMenuOpen(false);
+        setClosedByOutsideClick(true);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
   const handleServicesHover = () => {
     setServicesDropdownVisible(true);
   };
@@ -54,7 +69,11 @@ const Header = () => {
   const handleCloseMobileMenu = () => {
     setMobileMenuOpen(false); // Close the mobile menu
   };
-
+  const handleMobileMenuClick = () => {
+    setIsMobileMenuOpen(false);
+    setClosedByOutsideClick(true);
+    setMobileMenuOpen(false);
+  };
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -65,9 +84,9 @@ const Header = () => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -87,11 +106,21 @@ const Header = () => {
                   <div className="dropdown-content">
                     <ul>
                       <li>
-                        <Link href="/services/newborn-photography">Newborn Photography</Link>
-                        <Link href="/services/long-island-maternity-photographer">Maternity</Link>
-                        <Link href="/services/long-island-cake-smash-1-year-photos">Cake Smash/ Birthday</Link>
-                        <Link href="/services/long-island-family-photography">Family Photography</Link>
-                        <Link href="/services/6-month-baby-photos">6 Month Baby Photos </Link>
+                        <Link href="/services/newborn-photography">
+                          Newborn Photography
+                        </Link>
+                        <Link href="/services/long-island-maternity-photographer">
+                          Maternity
+                        </Link>
+                        <Link href="/services/long-island-cake-smash-1-year-photos">
+                          Cake Smash/ Birthday
+                        </Link>
+                        <Link href="/services/long-island-family-photography">
+                          Family Photography
+                        </Link>
+                        <Link href="/services/6-month-baby-photos">
+                          6 Month Baby Photos{" "}
+                        </Link>
                         <li>
                           <Link
                             href="#"
@@ -102,18 +131,16 @@ const Header = () => {
                             {otherServicesDropdownVisible && (
                               <div className="sub-dropdown-content">
                                 <ul>
-
-                               {data.map((item,index)=>{
-                                 return(
-                                   <li key={index}> 
-                                    <Link href={`/services/${item.slug}`}>
-                                    
-                                    {item.title}
-                                    </Link>
-                                    </li>
-                                   )
+                                  {data.map((item, index) => {
+                                    return (
+                                      <li key={index}>
+                                        <Link href={`/services/${item.slug}`}>
+                                          {item.title}
+                                        </Link>
+                                      </li>
+                                    );
                                   })}
-                                  </ul>
+                                </ul>
                               </div>
                             )}
                           </Link>
@@ -138,16 +165,22 @@ const Header = () => {
                       <Link href="/newborns-portraits">Newborns Portraits</Link>
                     </li>
                     <li>
-                      <Link href="/portfolio/maternity">Maternity Photography</Link>
+                      <Link href="/portfolio/maternity">
+                        Maternity Photography
+                      </Link>
                     </li>
                     <li>
                       <Link href="/portfolio/family">Family Portraits</Link>
                     </li>
                     <li>
-                      <Link href="/portfolio/cake-smash">Cake Smash Photos</Link>
+                      <Link href="/portfolio/cake-smash">
+                        Cake Smash Photos
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/portfolio/engagement">Engagement Photography</Link>
+                      <Link href="/portfolio/engagement">
+                        Engagement Photography
+                      </Link>
                     </li>
                     {/* Add more portfolio items as needed */}
                   </ul>
@@ -166,15 +199,16 @@ const Header = () => {
           </ul>
         </div>
         <Link href="/">
-        <div className="centerlogo">
-          <Image src="/logo.webp" alt="Logo" width={120} height={100} />
-        </div></Link>
+          <div className="centerlogo">
+            <Image src="/logo.webp" alt="Logo" width={120} height={100} />
+          </div>
+        </Link>
         <div className="mobilemenu" onClick={handleMobileMenuToggle}>
-          <FaBars /> MENU
+          {mobileMenuOpen ? <FaTimes size={18}/> : <FaBars size={18}/>} 
         </div>
         {mobileMenuOpen && (
           <div ref={mobileMenuRef}>
-            <MobileMenu closeMenu={handleCloseMobileMenu}/>
+            <MobileMenu onClose={handleMobileMenuClick} />
           </div>
         )}
         <div className="rightsocial">
