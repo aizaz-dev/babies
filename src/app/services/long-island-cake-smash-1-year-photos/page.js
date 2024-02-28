@@ -1,7 +1,7 @@
 import Testimonials from "@/app/components/cardslide/CardSlide";
 import "./style.scss";
 
-const page = () => {
+const Page = () => {
   return (
     <div>
       
@@ -511,4 +511,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
