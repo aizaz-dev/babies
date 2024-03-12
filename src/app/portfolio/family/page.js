@@ -1,50 +1,23 @@
-"use client";
-import React, { useEffect, useState } from "react";
+'use client'
+import React, { useEffect, useState, useRef } from "react";
 import "./style.scss";
-import Gallery from "react-photo-gallery";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import ImageGallery from "react-image-gallery";
-
+import Masonry from 'react-masonry-css';
 import "react-image-gallery/styles/css/image-gallery.css";
 
 const Page = () => {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [popupOpen, setPopupOpen] = useState(null);
-  const [modalWidth, setModalWidth] = useState("50%");
   const [selectedImage, setSelectedImage] = useState(null);
   const [galleryOpen, setGalleryOpen] = useState(false);
+  const [showMasonry, setShowMasonry] = useState(false); // State to control visibility of masonry
+  const masonryRef = useRef(null);
 
-  const handlePopupToggle = (index) => {
-    setPopupOpen(popupOpen === index ? null : index);
-  };
-
-  useEffect(() => {
-    const updateModalWidth = () => {
-      const newWidth = window.innerWidth >= 768 ? "50%" : "80%";
-      setModalWidth(newWidth);
-    };
-
-    updateModalWidth();
-    window.addEventListener("resize", updateModalWidth);
-
-    return () => {
-      window.removeEventListener("resize", updateModalWidth);
-    };
-  }, []);
-  const handleThumbnailClick = (index) => {
-    setSelectedImage(index);
-    setGalleryOpen(true);
-  };
-
-  const handleCloseGallery = () => {
-    setSelectedImage(null);
-    setGalleryOpen(false);
-  };
   const photos = [
-    { src: "/m1.jpg", width: 150, height: 330 },
-    { src: "/m2.jpg", width: 281, height: 421 },
+    // Your photos here
+    { src: "/m1.jpg", width:100, height: 500 },
+    { src: "/m2.jpg", width: 181, height: 421 },
     { src: "/m3.jpg", width: 350, height: 250 },
-    { src: "/m4.jpg", width: 450, height: 350 },
+    { src: "/m4.jpg", width: 250, height: 350 },
     { src: "/m5.jpg", width: 320, height: 220 },
     { src: "/m6.jpg", width: 380, height: 280 },
     { src: "/m7.jpg", width: 420, height: 320 },
@@ -59,53 +32,56 @@ const Page = () => {
     { src: "/m16.jpg", width: 410, height: 310 },
     { src: "/m17.jpg", width: 380, height: 280 },
     { src: "/m18.jpg", width: 440, height: 340 },
-    // { src: '/m19.jpg', width: 350, height: 250 },
-    // Add more images with different dimensions as needed
+    { src: "/m18.jpg", width: 440, height: 340 },
+    { src: "/m18.jpg", width: 440, height: 340 },
+    { src: "/m18.jpg", width: 440, height: 340 },
+
+    // Add more images as needed
   ];
 
-  const handleMouseEnter = (index) => {
-    setHoveredIndex(index);
+  useEffect(() => {
+    // Adjust the height of all columns to match the height of the first column
+    if (masonryRef.current) {
+      const firstColumnHeight = masonryRef.current.firstChild.clientHeight;
+      const columns = masonryRef.current.querySelectorAll('.my-masonry-grid_column');
+      columns.forEach(column => {
+        column.style.height = `${firstColumnHeight}px`;
+      });
+    }
+  }, [selectedImage, galleryOpen]);
+
+  useEffect(() => {
+    // Delay the display of masonry section
+    const timer = setTimeout(() => {
+      setShowMasonry(true); // Show masonry after a delay
+    }, 1000); // Adjust the delay as needed
+
+    return () => clearTimeout(timer); // Cleanup the timer
+  }, []); // Empty dependency array means this effect runs once after the initial render
+
+  const handleThumbnailClick = (index) => {
+    setSelectedImage(index);
+    setGalleryOpen(true);
   };
 
-  const handleMouseLeave = () => {
-    setHoveredIndex(null);
-  };
-
-  const ImageComponent = ({ index, onClick, photo, margin }) => {
-    const imgStyle = {
-      cursor: "pointer",
-      objectFit: "cover",
-      transition: "transform 0.3s ease-in-out",
-      transform: hoveredIndex === index ? "scale(1.05)" : "scale(1)",
-    };
-
-    const handleClick = (event) => {
-      onClick(event, { photo, index });
-    };
-
-    return (
-      <div style={{ overflow: "hidden" }}>
-        <img
-          style={{ ...imgStyle, margin: `${margin}px` }}
-          {...photo}
-          onClick={onClick ? handleClick : null}
-          onMouseEnter={() => handleMouseEnter(index)}
-          onMouseLeave={handleMouseLeave}
-          onClick={() => handleThumbnailClick(index)}
-        />
-      </div>
-    );
+  const handleCloseGallery = () => {
+    setSelectedImage(null);
+    setGalleryOpen(false);
   };
 
   return (
     <main>
       <div className="main">
-        <div className="super_maternity">
-          <div className="maternity_main">
-            <div className="maternity_porfolio">Portfolio</div>
-            <div className="maternity__photography">Family Portraits</div>
-            <div className="maternity_main_sec">
-              {selectedImage !== null && galleryOpen && (
+      <div className="super_maternity">
+      <div className="maternity_main">
+      <div className="maternity_porfolio">Portfolio</div>
+            <div className="maternity__photography">Family Portraits
+
+</div>
+        <div className="maternity_main_sec">
+          
+          {/* Gallery and other sections here */}
+          {selectedImage !== null && galleryOpen && (
                 <div className="gallery-modal">
                   <div className="func">
                     <div className="close-icon" onClick={handleCloseGallery}>
@@ -147,16 +123,37 @@ const Page = () => {
                   </div>
                 </div>
               )}
-              <Gallery photos={photos} renderImage={ImageComponent} />
-              {/* <MatGallary/> */}
+        </div>
+        {showMasonry && (
+          <div  className="masonry-parent">
+            <div className="masonry-container" ref={masonryRef}>
+
+              
+              <Masonry
+                breakpointCols={{ default: 4, 1100: 3, 700: 2 }}
+                className="my-masonry-grid"
+                columnClassName="my-masonry-grid_column"
+              >
+                {photos.map((photo, index) => (
+                  <div style={{ overflow: 'hidden' }} key={index} onClick={() => handleThumbnailClick(index)}>
+                    <img
+                      src={photo.src}
+                      alt={`Photo ${index}`}
+                      style={{ width: '100%', display: 'block', cursor: 'pointer' }}
+                    />
+                  </div>
+                ))}
+              </Masonry>
             </div>
           </div>
-        </div>
+        )}
+        {/* Other sections here */}
+        </div></div>
         <div className="maternity_text_pra_main">
           <div className="maternity_text_pra_min">
           My family photography services are all about working with you to capture the perfect images of you and your family. There’s really no limit to the kind of magic we can create with a family photography setting.<br />
-          Stop and think when was the last time you had a professional full family photograph? As children age and grow up this often becomes less and less something many families do. children have their pictures taken at school and you may snap pics of the kids with your cell phone, but as months turn into years, it’s often far too long between professional photo sessions. So why not make an appointment for a unique family session today? <br /><br />
-          There’s no shortage of opportunities to do so. Perhaps you want to spruce up the family holiday greeting card, or you want to take an Easter Picture with you and your growing children. Valentines Day is another great opportunity to take pictures with the family. <br /> <br />
+          Stop and think when was the last time you had a professional full family photograph? As children age and grow up this often becomes less and less something many families do. children have their pictures taken at school and you may snap pics of the kids with your cell phone, but as months turn into years, it’s often far too long between professional photo sessions. So why not make an appointment for a unique family session today?<br /><br />
+          There’s no shortage of opportunities to do so. Perhaps you want to spruce up the family holiday greeting card, or you want to take an Easter Picture with you and your growing children. Valentines Day is another great opportunity to take pictures with the family.<br /> <br />
           You don’t need a holiday or a reason to take family pictures other than wanting to capture a moment in time. I love family photography because no two sessions are the same. Whether you’re looking to celebrate an event, prepare for your child’s final year of high school with Senior Portraits, or just have a new photo taken to update your picture frame at the office, I want to help you create a truly special family portrait.
          <br /><br />
          So if you’re ready, now is the perfect time to reach out and give me a call. I’d love to hear your ideas for a family photography session (all while sharing my own ideas based off of what you’re looking for). You can even schedule your session directly through the website if you’re set and ready to go.
@@ -179,8 +176,7 @@ const Page = () => {
           <button className="schedule_your_session_button">
             Schedule your session
           </button>
-        </div>
-      </div>
+        </div>      </div>
     </main>
   );
 };

@@ -1,50 +1,23 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./style.scss";
-import Gallery from "react-photo-gallery";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import ImageGallery from "react-image-gallery";
-
+import Masonry from "react-masonry-css";
 import "react-image-gallery/styles/css/image-gallery.css";
 
 const Page = () => {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [popupOpen, setPopupOpen] = useState(null);
-  const [modalWidth, setModalWidth] = useState("50%");
   const [selectedImage, setSelectedImage] = useState(null);
   const [galleryOpen, setGalleryOpen] = useState(false);
+  const [showMasonry, setShowMasonry] = useState(false); // State to control visibility of masonry
+  const masonryRef = useRef(null);
 
-  const handlePopupToggle = (index) => {
-    setPopupOpen(popupOpen === index ? null : index);
-  };
-
-  useEffect(() => {
-    const updateModalWidth = () => {
-      const newWidth = window.innerWidth >= 768 ? "50%" : "80%";
-      setModalWidth(newWidth);
-    };
-
-    updateModalWidth();
-    window.addEventListener("resize", updateModalWidth);
-
-    return () => {
-      window.removeEventListener("resize", updateModalWidth);
-    };
-  }, []);
-  const handleThumbnailClick = (index) => {
-    setSelectedImage(index);
-    setGalleryOpen(true);
-  };
-
-  const handleCloseGallery = () => {
-    setSelectedImage(null);
-    setGalleryOpen(false);
-  };
   const photos = [
-    { src: "/m1.jpg", width: 150, height: 330 },
-    { src: "/m2.jpg", width: 281, height: 421 },
+    // Your photos here
+    { src: "/m1.jpg", width: 100, height: 500 },
+    { src: "/m2.jpg", width: 181, height: 421 },
     { src: "/m3.jpg", width: 350, height: 250 },
-    { src: "/m4.jpg", width: 450, height: 350 },
+    { src: "/m4.jpg", width: 250, height: 350 },
     { src: "/m5.jpg", width: 320, height: 220 },
     { src: "/m6.jpg", width: 380, height: 280 },
     { src: "/m7.jpg", width: 420, height: 320 },
@@ -59,42 +32,43 @@ const Page = () => {
     { src: "/m16.jpg", width: 410, height: 310 },
     { src: "/m17.jpg", width: 380, height: 280 },
     { src: "/m18.jpg", width: 440, height: 340 },
-    // { src: '/m19.jpg', width: 350, height: 250 },
-    // Add more images with different dimensions as needed
+    { src: "/m18.jpg", width: 440, height: 340 },
+    { src: "/m18.jpg", width: 440, height: 340 },
+    { src: "/m18.jpg", width: 440, height: 340 },
+
+    // Add more images as needed
   ];
 
-  const handleMouseEnter = (index) => {
-    setHoveredIndex(index);
+  useEffect(() => {
+    // Adjust the height of all columns to match the height of the first column
+    if (masonryRef.current) {
+      const firstColumnHeight = masonryRef.current.firstChild.clientHeight;
+      const columns = masonryRef.current.querySelectorAll(
+        ".my-masonry-grid_column"
+      );
+      columns.forEach((column) => {
+        column.style.height = `${firstColumnHeight}px`;
+      });
+    }
+  }, [selectedImage, galleryOpen]);
+
+  useEffect(() => {
+    // Delay the display of masonry section
+    const timer = setTimeout(() => {
+      setShowMasonry(true); // Show masonry after a delay
+    }, 1000); // Adjust the delay as needed
+
+    return () => clearTimeout(timer); // Cleanup the timer
+  }, []); // Empty dependency array means this effect runs once after the initial render
+
+  const handleThumbnailClick = (index) => {
+    setSelectedImage(index);
+    setGalleryOpen(true);
   };
 
-  const handleMouseLeave = () => {
-    setHoveredIndex(null);
-  };
-
-  const ImageComponent = ({ index, onClick, photo, margin }) => {
-    const imgStyle = {
-      cursor: "pointer",
-      objectFit: "cover",
-      transition: "transform 0.3s ease-in-out",
-      transform: hoveredIndex === index ? "scale(1.05)" : "scale(1)",
-    };
-
-    const handleClick = (event) => {
-      onClick(event, { photo, index });
-    };
-
-    return (
-      <div style={{ overflow: "hidden" }}>
-        <img
-          style={{ ...imgStyle, margin: `${margin}px` }}
-          {...photo}
-          onClick={onClick ? handleClick : null}
-          onMouseEnter={() => handleMouseEnter(index)}
-          onMouseLeave={handleMouseLeave}
-          onClick={() => handleThumbnailClick(index)}
-        />
-      </div>
-    );
+  const handleCloseGallery = () => {
+    setSelectedImage(null);
+    setGalleryOpen(false);
   };
 
   return (
@@ -103,10 +77,9 @@ const Page = () => {
         <div className="super_maternity">
           <div className="maternity_main">
             <div className="maternity_porfolio">Portfolio</div>
-            <div className="maternity__photography">Engagement Photography
-
-</div>
+            <div className="maternity__photography">Engagement Photography</div>
             <div className="maternity_main_sec">
+              {/* Gallery and other sections here */}
               {selectedImage !== null && galleryOpen && (
                 <div className="gallery-modal">
                   <div className="func">
@@ -119,11 +92,16 @@ const Page = () => {
                         thumbnail: photo.src,
                       }))}
                       renderItem={(item) => (
-                        <div style={{ width: '100%', height: '90vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                          <img
-                            src={item.original}
-                            className="origimage"
-                          />
+                        <div
+                          style={{
+                            width: "100%",
+                            height: "90vh",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                          }}
+                        >
+                          <img src={item.original} className="origimage" />
                         </div>
                       )}
                       startIndex={selectedImage}
@@ -138,30 +116,85 @@ const Page = () => {
                             overflow: "hidden",
                           }}
                         >
-                          <img
-                            src={thumbnail}
-                            className="thumbn"
-                           
-                          />
+                          <img src={thumbnail} className="thumbn" />
                         </div>
                       )}
                     />
                   </div>
                 </div>
               )}
-              <Gallery photos={photos} renderImage={ImageComponent} />
-              {/* <MatGallary/> */}
             </div>
+            {showMasonry && (
+              <div className="masonry-parent">
+                <div className="masonry-container" ref={masonryRef}>
+                  <Masonry
+                    breakpointCols={{ default: 4, 1100: 3, 700: 2 }}
+                    className="my-masonry-grid"
+                    columnClassName="my-masonry-grid_column"
+                  >
+                    {photos.map((photo, index) => (
+                      <div
+                        style={{ overflow: "hidden" }}
+                        key={index}
+                        onClick={() => handleThumbnailClick(index)}
+                      >
+                        <img
+                          src={photo.src}
+                          alt={`Photo ${index}`}
+                          style={{
+                            width: "100%",
+                            display: "block",
+                            cursor: "pointer",
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </Masonry>
+                </div>
+              </div>
+            )}
+            {/* Other sections here */}
           </div>
         </div>
-        <div style={{marginTop:'50px'}} className="maternity_text_pra_main">
+        <div className="maternity_text_pra_main">
           {/* <div className="maternity_text_pra_min">
-          I absolutely love these kinds of photo shoots. A cake smash shoot is an emerging trend in child photography that really allows a child to be himself or herself. A few years ago “Wreck The Dress” became a major trend in post-wedding photography, where the bride would go out and do crazy things in her dress (such as diving into lakes, painting it, and doing just about anything else that “wrecks” it). The cake smash is something similar, only less messy and you won’t be destroying something expensive..<br />
-          A cake smash photo shoot is exactly what it sounds like. Your child, a birthday cake in front of them, and they take care of the rest. Whether they are messily eating the cake or destroying it (or realistically a bit of both), it’s the perfect opportunity for great photos. Besides, who doesn’t love a great baby eating photo? <br /><br />
-          I believe a cake smash photo shoot is the perfect opportunity to celebrate your child’s first year on this planet. You may want to put on a birthday party for your child but chances are not everyone you want to invite will be able to come. These photos are the perfect way to let them in on your little party.<br /> <br />
-          A cake smash brings out the joy of your child. No matter how many times I do such a photo shoot I’m always left amazed at how a cake can bring out the smile in the youngest of children. Even if they don’t eat any of it, the joy of grabbing hold of the cake, feeling it between their fingers, and watching it topple down while they smash it is an experience to behold.
-         <br /><br />
-         Please click through my portfolio of cash smash photo shoots. I’m sure you’ll love the pictures every bit as much as I do. Personally, I love a bright, vibrant cake with lots of colors. It really helps the photos pop, but you may have your own preference or style ideas. Perhaps your little tyke loves Batman or ponies or Wonder Woman. You can bring their interests into the cake smash photo shoot just like you would in any other session.
+            Maternity is such a special time in your life. This is especially
+            true if you’re pregnant for the first time. Your body is going
+            through all kinds of unexpected changes (because no matter how much
+            you read up on it or how much people tell you about it, there’s
+            never any real way to understand it until you actually go through
+            with it). The beautiful time in your life is something you may only
+            experience for a few months total. Even if you have several children
+            as a mother, your maternity time is one of the shortest periods in
+            your life, and someday you may want to look back and remember just
+            how it felt to carry your baby.
+            <br />
+            I love maternity photography because not only is it a way to
+            remember this important time in your life (and the life of your
+            baby), but it’s a fantastic way to show your child when they are
+            older. There’s also a maternal glow that develops in this stage. I
+            know you may not always feel it, but trust me, it’s there. Everyone
+            else can see this glow about you, and it shines through my lens.
+            <br />
+            <br />
+            Maternity photographs are great for when you want to share beautiful
+            photographs of you and your expectant body with family and friends.
+            You also need a photographic eye to make sure you’re captured at
+            just the right moment and at the right angle (because we’ve all seen
+            the cell phone photos that don’t always turn out, despite the best
+            intentions of the amateur photographer).
+            <br /> <br />
+            A maternity photo shoot is one I recommend to all expectant mothers,
+            especially if this is their first time pregnant. I know as a mother
+            I was in awe at the changes that my own body went through, and now
+            those photos are some of my favorite ever taken of me. I promise
+            you’ll feel the same way when you look back and see the pure joy and
+            amazement in your eyes.
+            <br />
+            <br />
+            If you’re interested in setting up a maternity photography session,
+            feel free to look through the maternity portfolio and then give me a
+            call with any questions you might have.
           </div> */}
         </div>
         <div className="let_me_main">

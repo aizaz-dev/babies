@@ -3,10 +3,10 @@ import React from "react";
 import "./style.scss";
 import data from "../array";
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
 import ServiceSlide from "./ServiceSlide";
-
 const Page = () => {
+
+
   const { id } = useParams();
   const filteredData = data.find((item) => {
     return item.slug === id;
@@ -92,4 +92,6 @@ const Page = () => {
   );
 };
 
-export default Page;
+
+
+export default Page
